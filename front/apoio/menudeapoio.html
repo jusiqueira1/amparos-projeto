@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Apoio</title>
+    <link rel="stylesheet" href="menudeapoio.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <header>
+        <img src="Group 5.png" class="background-img" alt="Tela inicial">
+    </header>
+
+    <div class="container">
+        <h1>Menu de Apoio</h1>
+        <section>
+            <div class="card">
+                <img src="terapeuta 2.jpg" alt="produto">
+                <h4>Daniela Ferreira</h4>
+                <p>PSICÓLOGA</p>
+                <button onclick="openModal('Daniela Ferreira')">Agendar consulta</button>
+            </div>
+
+            <div class="card">
+                <img src="terapeuta 3.jpg" alt="produto">
+                <h4>Patrícia Oliveira</h4>
+                <p>PSICÓLOGA</p>
+                <button onclick="openModal('Patrícia Oliveira')">Agendar consulta</button>
+            </div>
+
+            <div class="card">
+                <img src="terapeuta.jpg" alt="produto">
+                <h4>Débora Nunes</h4>
+                <p>PSICÓLOGA</p>
+                <button onclick="openModal('Débora Nunes')">Agendar consulta</button>
+            </div>
+        </section>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal')">&times;</span>
+            <h3>Agendar consulta com <span id="namePerson"></span></h3>
+            <input type="date" id="date" class="calendar" placeholder="Escolha uma data">
+            <div>
+                <input type="text" id="descricao" class="" placeholder="Adicione uma descrição">
+            </div>
+            <button onclick="submitDate()">Confirmar</button>
+        </div>
+    </div>
+
+    <div class="hero_area">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+            </g>
+        </svg>
+    </div>
+
+    <footer>
+        © 2024 Menu de Apoio
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+</html>
