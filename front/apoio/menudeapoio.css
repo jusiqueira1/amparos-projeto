@@ -1,13 +1,76 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #96339a;
     margin: 0;
     padding: 0;
-    /* height:500vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+}
+
+h1{
+    margin-left: 500px;
+}
+
+nav.menu-lateral {
+    width: 50px;
+    height: 100%;
+    background-color: rgb(239, 174, 240);
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #cc8cd8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+}
+
+nav.menu-lateral:hover {
+    width: 300px;
+}
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i {
+    color: purple;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    line-height: 40px;
+}
+
+ul li.item-menu:hover {
+    background: rgb(121, 43, 128);
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 40px;
+}
+
+ul li.item-menu a .icon > i {
+    font-size: 30px;
+    margin-left: 10px;
 }
 
 .modal.hidden {
@@ -57,7 +120,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 20px auto;
-    z-index: 1; 
+    z-index: 1;
     position: relative;
 }
 
@@ -75,8 +138,9 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    justify-content: center;
+    margin-left: 400px;
     transition: transform 0.2s;
-    flex: 1;
 }
 
 .card img {
@@ -105,14 +169,13 @@ button:hover {
     background-color: #9619af;
 }
 
-
-.hero_area {
+.ondinhas {
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 150px; 
+    height: 150px;
     background-color: transparent;
-    z-index: 0; 
+    z-index: 0;
 }
 
 .waves {
@@ -155,25 +218,4 @@ button:hover {
     100% {
         transform: translate3d(85px, 0, 0);
     }
-}
-
-@media (max-width: 768px) {
-    .hero_area {
-        height: 60px; 
-    }
-    .waves {
-        height: 100%;
-    }
-}
-
-
-footer {
-    background-color: #8524a3;
-    color: white;
-    width: 100%;
-    padding: 10px 0;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    z-index: 1; 
 }
