@@ -1,77 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(168, 84, 174);
     margin: 0;
     padding: 0;
     display: flex;
-    height: 100vh;
-}
-
-.left, .right {
-    flex: 1;
-    background: linear-gradient(to bottom, rgb(255, 85, 204), rgb(140, 0, 255), rgb(126, 104, 255));
-}
-
-
-.center {
-    flex: 0.2; /* Reduzi o tamanho da tela central */
-    background-color: rgb(114, 75, 255);
-    display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: center; 
+    min-height: 100vh; 
+    position: relative;
+}
+h1{
+    margin-left: 42%;
+    color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h4{
+    color: azure;
+    margin-top: 200px;
+    font-size: 14px;
+    text-align: center; 
+    max-width: 600px; 
+    line-height: 1.8; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+header {
+    position: relative;
+    width: 100%;
 }
 
-.urgent-message {
-    color: #fff;
-    font-size: 16px;
-    
-    margin-bottom: 380px;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    
+.background-img {
+    width: 100%;
+    height: auto;
 }
-
-.buttons-container {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.button {
-    width: 50px;
-    height: 50px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    margin: 2px;
-    cursor: pointer;
-}
-.button1 {
-    width: 70px; /* Ajuste o tamanho conforme necessário */
-    height: 70px; /* Ajuste o tamanho conforme necessário */
-    border-radius: 50%;
-    cursor: pointer;
-    background-image: url('icon_casa-removebg-preview.png');
-    background-size: contain; /* Alterado para contain */
-    background-repeat: no-repeat; /* Certifique-se de que a imagem não se repita */
-}
-
-
 #panic-button {
     position: absolute;
-    margin-bottom: 250px;
-    width: 100px;
-    height: 103px;
-    border: 10px solid #ebebeb; /* Ajustei a borda para uma cor uniforme */
-    box-shadow: 0px 0px 20px 2px rgb(226, 111, 255);
+    left: 45%;
+    width: 150px;
+    height: 150px;
+    border: 10px solid #ebebeb;
     border-radius: 50%;
     background-color: #ebebeb;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    box-shadow: 0 0 20px 2px rgba(226, 111, 255, 0.6);
+    transition: transform 0.2s;
 }
 
+#panic-button:hover {
+transform: scale(1.1);
+}
 #panic-button img {
     width: 80px;
-    height: 70px;
+    height: 80px;
     object-fit: contain;
+    display: block;
+}
+
+nav.menu-lateral {
+    width: 50px;
+    height: 100%;
+    background-color: rgb(202, 145, 206);
+    padding: 40px 0 40px 1%;
+    box-shadow: 3px 0 0 #a24cb7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+nav.menu-lateral:hover {
+    width: 250px;
+}
+
+.btn-expandir {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.btn-expandir > i {
+    color: purple;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+ul {
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li.item-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+    line-height: 40px;
+}
+
+ul li.item-menu:hover {
+    background: rgb(121, 43, 128);
+}
+
+ul li.item-menu a .txt-link {
+    margin-left: 20px;
+}
+
+ul li.item-menu a .icon > i {
+    font-size: 30px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    z-index: 1;
+    position: relative;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.ondinhas {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 150px;
+    background-color: transparent;
+    z-index: 0;
+    margin-top: 40px;
+}
+
+.waves {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+    transform-origin: center bottom;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
 }
