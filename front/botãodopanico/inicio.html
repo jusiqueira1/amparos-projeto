@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de Inicio</title>
     <link rel="stylesheet" href="botãodopanico.css">
-    
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -17,7 +15,7 @@
         </div>
         <ul>
             <li class="item-menu">
-                <a href="/front/botãodopanico/index4.html">
+                <a href="/front/botãodopanico/inicio.html">
                     <span class="icon"><i class="bi bi-house-door"></i></span>
                     <span class="txt-link">Início</span>
                 </a>
@@ -59,15 +57,16 @@
     </nav>
 
     <header>
+        <div id="panic-button" onclick="triggerPanic()">
+            <img src="botaoo.png" alt="Sirene">
+        </div>
         <div class="container">
             <h1>Bem-Vinda !</h1>
             <section id="cards">
             </section>
         </div>
-        <button id="panic-button" onclick="triggerPanic()">
-            <img src="Captura de Tela (29).png" alt="Sirene">
-        </button>
     </header>
+    
     <h4>
         A palavra “Amparo” significa proteção e auxilio, vindo do latim “Anteparus” que significa preparar antes com adição de “Parare” que significa proteção de algo necessário.
         O Amparos busca ser um refúgio para mulheres em situação de violência na cidade de São Leopoldo,auxiliando com suporte virtual e apoio emocional.
@@ -92,17 +91,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="script.js"></script>
-    <script>
-        function triggerPanic() {
-            alert("Botão do Pânico acionado! Contato da polícia encaminhado.");
-        }
-
-        function toggleMenu() {
-            const menu = document.querySelector('nav.menu-lateral');
-            const width = menu.style.width === '250px' ? '50px' : '250px';
-            menu.style.width = width;
-        }
-
-    </script>
+    
 </body>
 </html>

@@ -83,8 +83,9 @@ body {
     background-color: #ffffff;
     border-radius: 7px;
     padding: 40px;
-    height: 300px;
+    height: 350px;
     width: 300px;
+    margin-bottom: 100px;
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
     z-index: 1; 
 }
@@ -155,19 +156,40 @@ h3 {
     z-index: 2;
 }
 .btn {
-    background-color: #bd02c4;
-    color: #fff;
-    height: 300px;
-    font-size: 20px;
-    width:200px;
-    border: none;
-    border-radius: 20px 20px 20px 20px;
-    transition: all linear 160ms;
-    cursor: pointer;
-    margin-left: 50px;
+    background-color: #bd02c4; /* Cor de fundo igual ao botão de cadastrar como médica */
+    color: #fff; /* Cor do texto igual ao botão de cadastrar como médica */
+    font-size: 14px; /* Ajuste o tamanho da fonte para combinar com o botão de cadastrar como médica */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 20px; /* Bordas arredondadas semelhantes ao botão de cadastrar como médica */
+    padding: 10px 20px; /* Ajuste o preenchimento para ficar mais semelhante ao botão de cadastrar como médica */
+    transition: background-color 160ms linear, transform 160ms linear; /* Transições para efeito hover */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse sobre o botão */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    display: inline-block; /* Garante que o botão seja exibido como um bloco em linha */
+    margin: 10px 0; /* Margens para espaçamento em torno do botão */
+    text-decoration: none; /* Remove a decoração de texto padrão dos links, se houver */
 }
 
 .btn:hover {
-    transform: scale(1.05);
-    background-color: #860097;
+    background-color: #860097; /* Cor de fundo ao passar o mouse, semelhante ao botão de cadastrar como médica */
+    transform: scale(1.05); /* Leve aumento de escala ao passar o mouse */
+}
+.btn-cadastrar {
+    display: inline-block;
+    background-color: #bd02c4; /* Cor de fundo igual ao botão "Acessar" */
+    color: #fff; /* Cor do texto igual ao botão "Acessar" */
+    font-size: 14px; /* Tamanho da fonte igual ao botão "Acessar" */
+    border: none; /* Remove a borda padrão */
+    border-radius: 20px; /* Bordas arredondadas semelhantes ao botão "Acessar" */
+    padding: 10px 20px; /* Preenchimento para ajustar o tamanho do botão */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    text-decoration: none; /* Remove o sublinhado do link */
+    transition: background-color 160ms linear, transform 160ms linear; /* Transições suaves para efeito hover */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    margin: 10px 0; /* Margens para espaçamento em torno do botão */
+}
+
+.btn-cadastrar:hover {
+    background-color: #860097; /* Cor de fundo ao passar o mouse */
+    transform: scale(1.05); /* Leve aumento de escala ao passar o mouse */
 }

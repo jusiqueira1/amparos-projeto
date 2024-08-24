@@ -1,6 +1,6 @@
 const connection = require('../config/db');
 
-async function salvarMedica(request, response) {
+async function salvarProfissional(request, response) {
     let params = Array(
         request.body.nome,
         request.body.especialidade,
@@ -8,7 +8,7 @@ async function salvarMedica(request, response) {
     );
     console.log(params);
 
-    let query = "INSERT INTO medicas(nome,especialidade,imagem) VALUES(?,?,?);";
+    let query = "INSERT INTO profissionais(nome,especialidade,imagem) VALUES(?,?,?);";
 
     connection.query(query, params, (err, results) => {
         if(results) {
@@ -27,8 +27,8 @@ async function salvarMedica(request, response) {
     })
 }
 
-async function listMedicas (request, response) {
-    let query = "SELECT * FROM medicas;";
+async function listProfissionais (request, response) {
+    let query = "SELECT * FROM profissionais;";
 
     connection.query(query, (err, results) => {
 
@@ -52,6 +52,6 @@ async function listMedicas (request, response) {
 }
 
 module.exports = {
-    salvarMedica,
-    listMedicas
+    salvarProfissional,
+    listProfissionais
 }

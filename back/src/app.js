@@ -6,7 +6,7 @@ const app = express();
 
 const router = require('./routes/usersRouter');
 const loginRouter = require('./routes/loginRouter');
-const medicasRouter = require('./routes/medicasRouter');
+const profissionalRouter = require('./routes/profissionalRouter');
 
 app.use(express.json());
 app.use(cors())
@@ -14,6 +14,6 @@ app.set('port', process.env.PORT || 3005);
 
 app.use('/api', router);
 app.use('/api', loginRouter);
-app.use('/api', medicasRouter);
+app.use('/api', profissionalRouter);
 
 module.exports = app;

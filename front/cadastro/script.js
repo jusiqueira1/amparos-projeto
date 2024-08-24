@@ -19,8 +19,7 @@ async function handleSubmit(event) {
 
     if (result.success) {
         alert("Bora")
-        // direciona para pagina de login
-        // window.location("../login/index.html")
+        
         window.location.href = "../login/login.html";
 
     } else {

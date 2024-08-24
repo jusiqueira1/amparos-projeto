@@ -1,51 +1,31 @@
-// Alternar a expansão do menu lateral
 function toggleMenu() {
     const menu = document.querySelector('nav.menu-lateral');
     menu.classList.toggle('expanded');
 }
 
-// Inicializar os calendários Flatpickr quando o DOM estiver carregado
-document.addEventListener('DOMContentLoaded', function() {
-    flatpickr("#date1", {
-        dateFormat: "d/m/Y",
-        minDate: "today"
-    });
-    flatpickr("#date2", {
-        dateFormat: "d/m/Y",
-        minDate: "today"
-    });
-    flatpickr("#date3", {
-        dateFormat: "d/m/Y",
-        minDate: "today"
-    });
+function formatDate(dateStr, timeStr) {
+    const [day, month, year] = dateStr.split('/');
+    return `${year}-${month}-${day} ${timeStr}`;
+}
 
-    // Chama a função para carregar as médicas
-    getMedicas();
-});
-
-// Função para abrir o modal com o nome da médica
 function openModal(namePerson) {
     document.getElementById("namePerson").innerHTML = namePerson;
     document.getElementById("modal").classList.remove('hidden');
 }
 
-// Função para fechar o modal
 function closeModal() {
     document.getElementById("modal").classList.add('hidden');
 }
-
-// Função para submeter o agendamento
 async function submitDate() {
     const data_evento = document.getElementById("date").value;
-    const formattedDate = formatDate(data_evento);
+    const hora_evento = document.getElementById("hora").value; 
+    const formattedDate = formatDate(data_evento, hora_evento);
     const descricao = document.getElementById("descricao").value;
 
-    // Fecha o modal após submeter
     closeModal();
 
-    // Dados a serem enviados para o servidor
-    let data = { data_evento: formattedDate, descricao };
-    console.log(data);
+    let data = { data_evento: formattedDate, hora_evento, descricao };
+    console.log(data); 
 
     try {
         let response = await fetch("http://localhost:3004/api/agendar", {
@@ -69,43 +49,42 @@ async function submitDate() {
     }
 }
 
-// Função para formatar a data para o formato desejado
-function formatDate(dateStr) {
-    const [day, month, year] = dateStr.split('/');
-    return `${day}-${month}-${year}`;
-}
+document.addEventListener('DOMContentLoaded', function() {
+    flatpickr("#date", {
+        dateFormat: "d/m/Y",
+        minDate: "today"
+    });
 
-// Função para buscar e exibir as médicas
-async function getMedicas() {
+    getProfissionais();
+});
+
+async function getProfissionais() {
     try {
-        const response = await fetch('http://localhost:3004/api/medicas', {
+        const response = await fetch('http://localhost:3004/api/profissionais', {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
-            }
+            }           
         });
 
         const results = await response.json();
-        let medicas = results.data;
+        let profissionais = results.data;
 
-        // Limpa o conteúdo anterior
         document.getElementById('cards').innerHTML = '';
 
-        // Adiciona cada médica ao HTML
-        medicas.forEach(medica => {
+        profissionais.forEach(profissional => {
             let html = `
                 <div class='card'>
                     <img src='terapeuta 2.jpg' alt='produto'>
-                    <h4>${medica.nome}</h4>
-                    <p>${medica.especialidade}</p>
-                    <button onclick="openModal('${medica.nome}')">Agendar consulta</button>
+                    <h4>${profissional.nome}</h4>
+                    <p>${profissional.especialidade}</p>
+                    <button onclick="openModal('${profissional.nome}')">Agendar consulta</button>
                 </div>
             `;
             document.getElementById('cards').innerHTML += html;
         });
 
     } catch (error) {
-        console.error('Erro ao buscar médicas:', error);
+        console.error('Erro ao buscar profissionais:', error);
     }
 }
-

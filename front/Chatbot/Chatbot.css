@@ -22,6 +22,8 @@ nav.menu-lateral {
   left: 0;
   transition: width 0.3s ease;
   overflow: hidden;
+  white-space: nowrap;
+
 }
 
 nav.menu-lateral:hover {
@@ -82,7 +84,7 @@ header {
 }
 
 #chat-messages {
-  padding: 10px;
+  padding: 50px;
   overflow-y: auto;
 }
 
@@ -260,7 +262,6 @@ h3{
   margin-left: 400px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
 #robot-icon {
   display: flex;
   align-items: center;
@@ -270,11 +271,11 @@ h3{
 }
 
 #robot-icon i {
-  font-size: 45px;
-  
+  font-size: 45px; /* Ajuste o tamanho conforme necessário */
   margin-right: 10px;
-  color: #6b6b6b;
+  color: #6b6b6b; /* Ajuste a cor conforme necessário */
 }
+
 
 .question input:checked ~ .answer {
   display: block
@@ -326,8 +327,8 @@ input[type="text"] {
 .card-container{
   margin-top: 10%;
   transition: 0.3s;
-  width: 40vw;
-  height: 90vh;
+  width: 50vw;
+  height: 100vh;
   margin-left: 30%;
   background-color: rgb(255, 255, 255);
   animation-name: floating;

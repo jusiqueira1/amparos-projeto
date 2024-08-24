@@ -12,13 +12,17 @@ async function handleSubmit(event){
 
     console.log(nome, especialidade, file)
 
-    const response = await fetch('http://localhost:3004/api/salvar/medica', {
+    const response = await fetch('http://localhost:3004/api/salvar/profissional', {
         method: "POST",
         body: formData
     })
+    let result = await response.json();
+ 
+    if (result.success) {
+        window.location.href = "../botãodopanico/inicio.html";
+    } else {
+        alert("Falha ao cadastrar Verifique suas credenciais.");
+    }
 
-    // const results = response.json();
-
-    // console.log(results);
 }
 
