@@ -8,125 +8,117 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/natural/0.6.4/natural.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"></head>
 <body>
-    <nav class="menu-lateral">
-        <div class="btn-expandir" onclick="toggleMenu()"></div>
-        <ul>
-            <li class="item-menu">
-                <a href="/front/botãodopanico/inicio.html">
-                    <span class="icon"><i class="bi bi-house-door"></i></span>
-                    <span class="txt-link">Início</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="/front/Chatbot/Chatbot.html">
-                    <span class="icon"><i class="bi bi-robot"></i></span>
-                    <span class="txt-link">Chatbot</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="/front/apoio/menudeapoio.html">
-                    <span class="icon"><i class="fa fa-heartbeat" style="font-size:24px"></i></span>
-                    <span class="txt-link">Central de Apoio</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="/front/doações/doações.html">
-                    <span class="icon"><i class="bi bi-currency-dollar"></i></span>
-                    <span class="txt-link">Doações</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="/front/News/News.html">
-                    <span class="icon"><i class="bi bi-newspaper"></i></span>
-                    <span class="txt-link">Notícias</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-person"></i></span>
-                    <span class="txt-link">Perfil</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="card-container">
-        <div id="robot-icon">
-            <i class="fas fa-robot"></i>
-            <div class="balao2">
-                <span>
-                    <h2>Olá! Bem-vinda ao seu amparo digital!</h2>
-                    <h3>Tire dúvidas ou busque ajuda aqui!</h3>
+  <nav class="menu-lateral">
+    <div class="btn-expandir" onclick="toggleMenu()">
+    </div>
+    <ul>
+        <li class="item-menu">
+            <a href="/front/botãodopanico/inicio.html">
+                <span class="icon"><i class="bi bi-house-door"></i></span>
+                <span class="txt-link">Início</span>
+            </a>
+        </li>
+        <li class="item-menu">
+            <a href="/front/Chatbot/Chatbot.html">
+                <span class="icon"><i class="bi bi-robot"></i></span>
+                <span class="txt-link">Chatbot</span>
+            
+            </a>
+        </li>
+        <li class="item-menu">
+          <a href="/front/apoio/menudeapoio.html">
+              <span class="icon"><i class="fa fa-heartbeat" style="font-size:24px"></i>
+              </span>
+              <span class="txt-link">Central de Apoio</span>
+          
+          </a>
+      </li>
+        <li class="item-menu">
+            <a href="/front/doações/doações.html">
+                <span class="icon"><i class="bi bi-currency-dollar"></i>
                 </span>
-            </div>
-        </div>
+                <span class="txt-link">Doações</span>
+            </a>
+        </li>
+        <li class="item-menu">
+            <a href="/front/News/News.html">
+                <span class="icon"><i class="bi bi-newspaper"></i>
+                </span>
+                <span class="txt-link">Notícias</span>
+            </a>
+        </li>
+        <li class="item-menu">
+            <a href="#">
+                <span class="icon"><i class="bi bi-person"></i>
 
-        <div class="question">
-            <input type="checkbox" id="question-1">
-            <button id="button-1">
-                <label for="question-1">Quais são os tipos de violência?</label>
-            </button>
-            <div class="answer">
-                <li>Patrimonial: O agressor destrói objetos de valor, documentos, etc.</li>
-                <li>Psicológica: A mulher é constrangida através de atos e palavras.</li>
-                <li>Moral: Conduta que importe em calúnia.</li>
-                <li>Física: Agressões físicas, como socos, chutes, etc.</li>
-                <li>Sexual: Constranger alguém para obter vantagem sexual.</li>
-            </div>
-        </div>
+                </span>
+                <span class="txt-link">Perfil</span>
+            </a>
+        </li>
+    </ul>
+</nav>
 
-        <div class="question">
-            <input type="checkbox" id="question-2">
-            <button id="button-2">
-                <label for="question-2">Como saber se estou sofrendo violência?</label>
-            </button>
-            <div class="answer">
-                <li>Sente-se envergonhada ou humilhada.</li>
-                <li>Teme pela segurança pessoal e de seus filhos.</li>
-                <li>Sente que não tem controle sobre sua vida.</li>
-                <li>Acredita que suas lesões não são importantes.</li>
-            </div>
-        </div>
 
-        <div class="question">
-            <input type="checkbox" id="question-3">
-            <button id="button-3">
-                <label for="question-3">Como saber se estou sofrendo assédio?</label>
-            </button>
-            <div class="answer">
-                <li>Piadas ofensivas ou intimidadoras.</li>
-                <li>Observações humilhantes ou calúnias.</li>
-                <li>Apalpar o corpo da mulher sem consentimento.</li>
-            </div>
-        </div>
-
-        <div class="question">
-            <input type="checkbox" id="question-4">
-            <button id="button-4">
-                <label for="question-4">Número de Emergência</label>
-            </button>
-            <div class="answer-1">
-                <li>190 - Polícia</li>
-                <li>199 - Defesa Civil</li>
-                <li>192 - SAMU</li>
-                <li>180 - Delegacia da Mulher</li>
-                <li>193 - Bombeiros</li>
-            </div>
-        </div>
-
-        <div id="chat-messages"></div>
-
-        <div class="user-input">
-            <form id="chat-form">
-                <input type="text" id="message" placeholder="Digite sua mensagem">
-                <button type="button" id="send-btn">Enviar</button>
-            </form>
+  <div class="card-container">
+    <div id="robot-icon">
+      <i class="fas fa-robot"></i>
+      <div class="balao2"><span><h2>Olá!Bem-vinda ao seu amparo digital! </h2>
+      <h3>Tire dúvidas ou busque ajuda aqui!</h3></span></div>
+  </div>
+    <div class='question'>
+        <input type='checkbox' id='question-1'>
+        <button id="button"> <label for='question-1'>Quais são os tipos de violência?</label></button>
+        <div class='answer'>
+          
+          <li>Patrimonial:O agressor destrói de modo parcial ou total objetos de valor, documentos, instrumentos de trabalho e bens materiais, causando danos para a vítima. </li>
+          <li>Psicológica:A mulher sente-se diminuída e constrangida através de atos e palavras do agressor para mantê-la, tendo também seu estilo de vida passa a ser controlado. </li>
+          <li>Moral: Qualquer conduta que importe em calúnia, quando o agressor afirma falsamente que aquela praticou crime que ela não cometeu;</li>
+          <li>Física:O agressor ofende a saúde corporal da mulher, com atos de agressão, por meio de socos, chutes, facada, estrangulamento, enforcamento. </li>
+          <li>Sexual:É o ato de constranger alguém com gestos, prevalecendo-se de relações de confiança ,de autoridade ou de relação de emprego , com o objetivo de obter vantagem sexual.</li>
         </div>
     </div>
-
-    <script src="script5.js"></script>
+     
+      <div class='question'>
+        <input type='checkbox' id='question-2'>
+        <button id="button"><label for='question-2'>Como saber se estou sofrendo violência?</label></button>
+        <div class='answer'>
+          <li>Ela sente-se envergonhada ou humilhada. ...</li>
+          <li>Teme pela sua segurança pessoal e pela segurança de seus filhos e filhas. ...</li>
+          <li>Sente que não tem controle sobre o que acontece na sua vida. ...</li>
+            Crê que suas lesões e problemas não são importantes.
+        </div>
+      </div>
+      <div class='question'>
+        <input type='checkbox' id='question-3'>
+        <button id="button"><label for='question-3'>Como saber se estou sofrendo assédio?</label></button>
+        <div class='answer'>
+          <li>Piadas ofensivas, intimidadoras ou incômodas.</li>
+          <li>Observações humilhantes. Xingamentos, apelidos ofensivos ou calúnias.</li>
+          <li>Apalpar o corpo da mulher, sem seu consentimento;</li>
+        </div>
+      </div>
+      <div class='question'>
+        <input type='checkbox' id='question-4'>
+        <button id="button"><label for='question-4'>Número de Emergência</label></button>
+        <div class='answer-1'>
+          
+          <li>190.-Policia</li>
+          <li>199.-Defesa Civil</li>
+          <li>192.-SAMU</li>
+          <li>180-Delegacia da Mulher</li>  
+          <li>193-Bombeiros</li>
+        </div>
+      </div>
+      <div id="chat-messages"></div>
+        <div class="user-input">
+    
+          <input type="text" id="message" placeholder="Digite sua mensagem">
+          <button id="send-btn">Enviar</button>
+        </div>
+      </div>
+  </div>
+  <script src="script5.js"></script>
 </body>
 </html>

@@ -1,19 +1,11 @@
-// Seleciona elementos da página
 const chatBot = document.querySelector("#chat-messages");
-const button = document.querySelector("#send-btn");
 const mensagem = document.getElementById("message");
 const chatForm = document.querySelector(".user-input");
 
-// Função para enviar a mensagem e receber resposta da API Gemini
 chatForm.onsubmit = async function(e) {
     e.preventDefault();
-    enviarMensagem();
-};
+    let prompt = mensagem.value; 
 
-async function enviarMensagem() {
-    let prompt = mensagem.value;
-
-    // Preparando os dados para enviar à API
     let data = { prompt };
     try {
         const response = await fetch(`http://localhost:3004/api/chat`, {
@@ -35,9 +27,8 @@ async function enviarMensagem() {
     }
 }
 
-// Função para criar a mensagem do usuário no chat
 function criarChat(msg) {
-    mensagem.value = ""; // Limpa o campo de mensagem após o envio
+    mensagem.value = ""; 
     return `
         <div class="user-message">
             <p>${msg}</p>
@@ -45,7 +36,6 @@ function criarChat(msg) {
     `;
 }
 
-// Função para criar a resposta da API no chat
 function criarResposta(retorno) {
     let prompt = retorno.replace(/\*\*/g, '<br><br>');
     prompt = prompt.replace(/\*/g, '<br>'); 
@@ -54,19 +44,14 @@ function criarResposta(retorno) {
             <p>${prompt}</p>
         </div>
     `;
-    texto(respostaHTML); // Passa a resposta para a função texto
+    texto(respostaHTML);
 }
 
-// Função para exibir a mensagem e a resposta no chat
 function texto(respostaHTML) {
-    chatBot.innerHTML += criarChat(mensagem.value); // Adiciona a mensagem do usuário
+    chatBot.innerHTML += criarChat(mensagem.value); 
     setTimeout(function() {
-        chatBot.innerHTML += respostaHTML; // Adiciona a resposta após um atraso
+        chatBot.innerHTML += respostaHTML; 
     }, 1000);
 
-    // Rolar o chat para o final
     chatBot.scrollTop = chatBot.scrollHeight;
 }
-
-// Evento para o botão enviar
-button.addEventListener("click", enviarMensagem);
