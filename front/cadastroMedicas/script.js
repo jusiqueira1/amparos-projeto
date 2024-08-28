@@ -15,7 +15,7 @@ async function handleSubmit(event){
     const response = await fetch('http://localhost:3004/api/salvar/profissional', {
         method: "POST",
         body: formData
-    })
+    })  
     let result = await response.json();
  
     if (result.success) {
