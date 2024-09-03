@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento de Consulta</title>
+    <title>Menu de Apoio</title>
     <link rel="stylesheet" href="menudeapoio.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -16,83 +15,92 @@
         </div>
         <ul>
             <li class="item-menu">
-                <a href="/front/botãodopanico/inicio.html">
+                <a href="../botaodopanico/inicio.html">
                     <span class="icon"><i class="bi bi-house-door"></i></span>
                     <span class="txt-link">Início</span>
                 </a>
             </li>
             <li class="item-menu">
-                <a href="/front/Chatbot/Chatbot.html">
+                <a href="../Chatbot/Chatbot.html">
                     <span class="icon"><i class="bi bi-robot"></i></span>
                     <span class="txt-link">Chatbot</span>
+               
                 </a>
             </li>
-            
             <li class="item-menu">
-                <a href="/front/apoio/menudeapoio.html">
+                <a href="../apoio/menudeapoio.html">
                     <span class="icon"><i class="fa fa-heartbeat" style="font-size:24px"></i>
                     </span>
                     <span class="txt-link">Central de Apoio</span>
-                
+               
                 </a>
             </li>
             <li class="item-menu">
-                <a href="/front/doações/doações.html">
-                    <span class="icon"><i class="bi bi-currency-dollar"></i></span>
+                <a href="../doacoes/doacoes.html">
+                    <span class="icon"><i class="bi bi-currency-dollar"></i>
+                    </span>
                     <span class="txt-link">Doações</span>
                 </a>
             </li>
             <li class="item-menu">
-                <a href="/front/News/News.html">
-                    <span class="icon"><i class="bi bi-newspaper"></i></span>
+                <a href="../News/News.html">
+                    <span class="icon"><i class="bi bi-newspaper"></i>
+                    </span>
                     <span class="txt-link">Notícias</span>
                 </a>
             </li>
             <li class="item-menu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-person"></i></span>
+                <a href="../editperfil/editperfil.html">
+                    <span class="icon"><i class="bi bi-person"></i>
+ 
+                    </span>
                     <span class="txt-link">Perfil</span>
                 </a>
             </li>
         </ul>
     </nav>
-
+ 
+    <header>
+        <img src="Group 5.png" class="background-img" alt="Tela inicial">
+    </header>
+ 
     <div class="container">
-        <h1>Agendamento de Consultas</h1>
-
-        <div id="modal" class="modal hidden">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal()">&times;</span>
-                <h2>Agendar Consulta com <span id="namePerson"></span></h2>
-                <label for="date">Data</label>
-                <input type="text" id="date" name="date" class="calendar" placeholder="DD/MM/YYYY">
-                <label for="hora">Horário</label>
-                <input type="time" id="hora" name="hora">
-                <label for="descricao">Descrição</label>
-                <textarea id="descricao" name="descricao"></textarea>
-                <button onclick="submitDate()">Confirmar</button>
-                <button onclick="closeModal()">Cancelar</button>
-            </div>
-        </div>
-
+        <h1>Menu de Apoio</h1>
         <section id="cards">
         </section>
     </div>
+ 
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Agendar consulta com <span id="namePerson"></span></h3>
+            <input type="date" id="date" class="calendar" placeholder="Escolha uma data">
+            <div>
+                <input type="text" id="descricao" placeholder="Adicione uma descrição">
+            </div>
+            <button onclick="submitDate()">Confirmar</button>
+        </div>
+    </div>
+ 
     <div class="ondinhas">
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
-                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
             </defs>
             <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
                 <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
                 <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
                 <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
             </g>
         </svg>
     </div>
-    
-    <script src="./script.js"></script>
+ 
+    <footer>
+        © 2024 Amparos
+    </footer>
+ 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
 </body>
 </html>

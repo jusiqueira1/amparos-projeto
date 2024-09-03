@@ -2,31 +2,42 @@ function toggleMenu() {
     const menu = document.querySelector('nav.menu-lateral');
     menu.classList.toggle('expanded');
 }
-
-function formatDate(dateStr, timeStr) {
-    const [day, month, year] = dateStr.split('/');
-    return `${year}-${month}-${day} ${timeStr}`;
-}
-
+ 
+document.addEventListener('DOMContentLoaded', function() {
+    flatpickr("#date1", {
+        dateFormat: "d/m/Y",
+        minDate: "today"
+    });
+    flatpickr("#date2", {
+        dateFormat: "d/m/Y",
+        minDate: "today"
+    });
+    flatpickr("#date3", {
+        dateFormat: "d/m/Y",
+        minDate: "today"
+    });
+    getProfissionais();
+});
+ 
 function openModal(namePerson) {
     document.getElementById("namePerson").innerHTML = namePerson;
     document.getElementById("modal").classList.remove('hidden');
 }
-
+ 
 function closeModal() {
     document.getElementById("modal").classList.add('hidden');
 }
+ 
 async function submitDate() {
     const data_evento = document.getElementById("date").value;
-    const hora_evento = document.getElementById("hora").value; 
-    const formattedDate = formatDate(data_evento, hora_evento);
+    const formattedDate = formatDate(data_evento);
     const descricao = document.getElementById("descricao").value;
-
+ 
     closeModal();
-
-    let data = { data_evento: formattedDate, hora_evento, descricao };
-    console.log(data); 
-
+ 
+    let data = { data_evento: formattedDate, descricao };
+    console.log(data);
+ 
     try {
         let response = await fetch("http://localhost:3004/api/agendar", {
             method: "POST",
@@ -35,9 +46,9 @@ async function submitDate() {
             },
             body: JSON.stringify(data)
         });
-
+ 
         let result = await response.json();
-
+ 
         if (result.success) {
             alert("Agendamento realizado com sucesso!");
         } else {
@@ -48,34 +59,31 @@ async function submitDate() {
         alert("Erro ao conectar-se com o servidor.");
     }
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    flatpickr("#date", {
-        dateFormat: "d/m/Y",
-        minDate: "today"
-    });
-
-    getProfissionais();
-});
-
+ 
+function formatDate(dateStr) {
+    const [date] = dateStr.split('/');
+    return `${date}`;
+}
+ 
 async function getProfissionais() {
+    const images = 'http://localhost:3004/uploads/';
     try {
         const response = await fetch('http://localhost:3004/api/profissionais', {
             method: "GET",
             headers: {
                 'Content-Type': 'application/json'
-            }           
+            }
         });
-
+ 
         const results = await response.json();
         let profissionais = results.data;
-
+        console.log(profissionais)
         document.getElementById('cards').innerHTML = '';
-
+ 
         profissionais.forEach(profissional => {
             let html = `
                 <div class='card'>
-                    <img src='terapeuta 2.jpg' alt='produto'>
+                    <img src='${images + profissional.imagem}' alt='Imagem'>
                     <h4>${profissional.nome}</h4>
                     <p>${profissional.especialidade}</p>
                     <button onclick="openModal('${profissional.nome}')">Agendar consulta</button>
@@ -83,7 +91,7 @@ async function getProfissionais() {
             `;
             document.getElementById('cards').innerHTML += html;
         });
-
+ 
     } catch (error) {
         console.error('Erro ao buscar profissionais:', error);
     }

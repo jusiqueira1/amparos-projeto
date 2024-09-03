@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt');
 async function storeConsulta(request, response) {
     const params = [
         request.body.data_evento,
-        request.body.hora_evento,  // Incluindo o horário
+        request.body.hora_evento,  
         request.body.descricao
     ];
 

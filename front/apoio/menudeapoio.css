@@ -185,7 +185,11 @@ button:hover {
     z-index: 0;
     overflow: hidden;
 }
-
+h1{
+    display: flex;
+    align-items: center;
+    margin-left: 500px;
+}
 .waves {
     position: absolute;
     width: 100%;
