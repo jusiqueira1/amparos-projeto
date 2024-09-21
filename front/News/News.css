@@ -80,70 +80,8 @@
         margin-left: 320px;
         margin-top: 100px;
     }
-    aside {
-        margin-top: 20px;
-        max-width: 1200px;
-        width: 100%;
-        display: flex;
-        
-        justify-content: center;
-        align-items: center;
     
-    }
-
-    aside h2 {
-        font-size: 1.8em;
-        margin-bottom: 15px;
-        color: #ffffff;
-    }
-
-    aside ul {
-        list-style: none;
-    }
-
-    aside ul li {
-        margin-bottom: 10px;
-    }
-
-    aside ul li a {
-        color: #333;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    aside ul li a:hover {
-        text-decoration: underline;
-    }
-
-    /* Container para as bolinhas */
-    .slide_bolinhas {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    /* Estilo padrão para todas as bolinhas */
-    .bolinha {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #333; /* Cor padrão da bolinha (cinza escuro) */
-        margin: 0 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        border: none; /* Remove qualquer borda padrão */
-        outline: none; /* Remove contorno ao focar */
-    }
-
-    /* Cor da bolinha quando ativa */
-    .bolinha.active {
-        background-color: #a24cb7; /* Cor roxa para a bolinha ativa */
-    }
-
-    /* Cor da bolinha ao passar o mouse */
-    .bolinha:hover {
-        background-color: #555; /* Cor mais clara quando o mouse passa sobre */
-    }
+    
 
 
     .container {
@@ -162,7 +100,7 @@
         display: flex;
         justify-content: center;
         color: #ffffff;
-        margin-top: 20px; /* Espaço entre o carrossel e os cards */
+        margin-top: 20px; 
     }
         
     section {

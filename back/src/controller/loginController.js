@@ -1,7 +1,7 @@
 const connection = require('../config/db');
 
 async function login(request, response) {
-    const query = 'SELECT email, senha FROM usuarios WHERE email = ?;';
+    const query = 'SELECT email, senha, perfil FROM usuarios WHERE email = ?;';
 
     const params = Array(
         request.body.email,
@@ -20,7 +20,7 @@ async function login(request, response) {
                     .json({
                         success: true,
                         message: 'Sucesso',
-                        data: results
+                        data: results[0]
                     })
             } else {
                 response

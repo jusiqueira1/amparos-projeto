@@ -1,16 +1,19 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(130, 6, 146));
-    margin: 0;
+    background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(221, 135, 255), rgb(130, 6, 146));
+    /* background-image: url('fundoroxo.png'); */
+    
+    background-size: 100%; 
+    background-repeat: no-repeat;
+    background-position: center top;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 10vh;
     position: relative;
-    min-height: 100vh;
-    overflow-x: hidden;
 }
 
 h1 {
@@ -81,7 +84,6 @@ ul li.item-menu a .icon > i {
 .modal.hidden {
     display: none;
 }
-
 .modal {
     display: flex;
     position: fixed;
@@ -103,6 +105,7 @@ ul li.item-menu a .icon > i {
     max-width: 500px;
     position: relative;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .close {
@@ -115,10 +118,52 @@ ul li.item-menu a .icon > i {
 
 .calendar {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 2px solid #a24cb7; /* Cor da borda roxa */
+    margin-top: 20px;
+    transition: border-color 0.3s ease;
+    font-size: 1.2em; /* Aumentar o tamanho da fonte */
+    color: #333; /* Cor do texto */
+    background-color: #f9f9f9; /* Cor de fundo suave */
+}
+
+.calendar:focus {
+    outline: none;
+    border-color: #9b3fa1; /* Cor de foco mais escura */
+    box-shadow: 0 0 5px rgba(162, 76, 183, 0.5); /* Sombra ao focar */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    margin-top: 10px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #a24cb7; /* Cor de foco */
+    box-shadow: 0 0 5px rgba(162, 76, 183, 0.5); /* Sombra ao focar */
+}
+
+button {
+    background-color: #a24cb7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
     margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #9b3fa1; /* Cor ao passar o mouse */
 }
 
 .container {
@@ -130,6 +175,23 @@ ul li.item-menu a .icon > i {
     flex: 1;
 }
 
+/* Estilos adicionais para o calendário */
+input[type="date"] {
+    appearance: none; /* Remove estilo padrão */
+    background-color: #f0f0f0; /* Cor de fundo */
+    border: 2px solid #a24cb7; /* Borda roxa */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.2em; /* Aumentar o tamanho da fonte */
+    text-align: center; /* Centralizar texto */
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border-color: #9b3fa1; /* Cor de foco mais escura */
+    box-shadow: 0 0 5px rgba(162, 76, 183, 0.5); /* Sombra ao focar */
+}
+
 section {
     display: flex;
     flex-wrap: wrap;
@@ -137,14 +199,13 @@ section {
     justify-content: space-between;
     margin-top: 20px;
 }
-
 .card {
-    background-color: rgb(202, 145, 206);
-    width: calc(33% - 20px);
+    background-color: rgb(255, 255, 255);
+    width: 30%;
     padding: 20px;
     margin-left: 430px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 15px rgb(128, 0, 167); /* Ajuste aqui */
     text-align: center;
     justify-content: center;
     transition: transform 0.2s;

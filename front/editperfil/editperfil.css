@@ -71,48 +71,80 @@ ul li.item-menu a .icon > i {
     margin-left: 10px;
 }
 
+ 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 130vh;
     background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(126, 104, 255));
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
-    margin-left: 320px;
-    margin-top: 100px;
-}
-.card {
-    background-color: rgb(202, 145, 206);
-    width: 800px;
-    height: 700px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    margin: 0;
+  }
+ .container {
+    background-color: rgb(162, 20, 228);
+    border-radius: 15px;
+    padding: 40px;
+    width: 300px;
+    
     text-align: center;
-    justify-content: center;
-    transition: transform 0.2s;
-}
+    box-shadow: 0px 0px 30px 10px rgb(255, 255, 255);
+ }
+ .profile {
+    margin-bottom: 20px;
+ }
 
-.card img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-button {
-    background-color: #81009e;
+ h2 {
     color: white;
+    font-size: 1.5em;
+    margin: 0;
+ }
+
+
+ form input {
+    width: 100%;
+
+    padding: 10px;
+    margin: 10px 0;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 1em;
+ }
+ form input::placeholder {
+    color: white;
+    opacity: 0.8;
+ }
+ form input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.5);
+ }
+
+ 
+.salvarButton {
+    display: inline-block;
+    background-color: #6b006e;
+    color: #fff;
+    font-size: 14px; 
+    border: none; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    transition: background-color 160ms linear, transform 160ms linear; 
+    cursor: pointer; 
+    margin: 10px 0; 
 }
 
-button:hover {
-    background-color: #9619af;
+.salvarButton:hover {
+    background-color: #45004d;
+    transform: scale(1.05); 
 }
+
+#imagemPerfil {
+    display: none;
+    width: 200px;
+    height: 170px;
+}
+  

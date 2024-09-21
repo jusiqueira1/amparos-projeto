@@ -76,7 +76,7 @@ ul li.item-menu a .icon > i {
 header {
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 30vh;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,14 +84,13 @@ header {
 }
 
 #chat-messages {
-  padding: 50px;
+  padding: 10px;
   overflow-y: auto;
 }
 
 .user-message {
   background-color: #f0f0f0;
   padding: 10px;
-  margin-bottom: 5px;
   border-radius: 10px;
 }
 
@@ -158,12 +157,11 @@ header {
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(126, 104, 255));
-  height: 120vh;
+  height: auto;
   align-items: center;
   justify-content: center;
  
 }
-/* Definindo a animação */
 @keyframes floating {
   0% {
         transform: translateY(0);
@@ -271,9 +269,9 @@ h3{
 }
 
 #robot-icon i {
-  font-size: 45px; /* Ajuste o tamanho conforme necessário */
+  font-size: 45px; 
   margin-right: 10px;
-  color: #6b6b6b; /* Ajuste a cor conforme necessário */
+  color: #6b6b6b; 
 }
 
 
@@ -325,11 +323,12 @@ input[type="text"] {
 }
 
 .card-container{
-  margin-top: 10%;
+  margin-top: 5%;
+  margin-bottom: 10px;
   transition: 0.3s;
-  width: 50vw;
-  height: 120vh;
-  margin-left: 30%;
+  width: 70vw;
+  height: 90vh;
+  margin-left: 20%;
   background-color: rgb(255, 255, 255);
   animation-name: floating;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 70px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -338,7 +337,7 @@ input[type="text"] {
     animation-timing-function: ease-in-out; 
    
     border-radius: 10px;
-    overflow: hidden;
+    overflow: scroll;
    
 }
 

@@ -63,56 +63,28 @@
 		</ul>
 	</nav>
 
-	<div class="container">
-		<div class="containerint">
-			<div class="leftside">
-				<div class="slideshow" id="slideshow">
-					<div class="slide_bolinhas">
-						<div class="bolinha" onclick="mudarSlide(0)"></div>
-						<div class="bolinha" onclick="mudarSlide(1)"></div>
-						<div class="bolinha" onclick="mudarSlide(2)"></div>
-						<div class="bolinha" onclick="mudarSlide(3)"></div>
-					</div>
-
-					<div class="slideshow_area">
-						<div class="slide" style="background-image: url('assets/images/imagem2.jfif');">
-							<div class="slide_info">
-								<div class="slide_info_titulo">Violência contra a Mulher</div>
-								<div class="slide_info_subtitulo">Aliquam nec lorem non ex bibendum sollicitudin. Curabitur et nibh ullamcorper.</div>
-							</div>
-						</div>
-						<div class="slide" style="background-image: url('assets/images/imagem3.jfif');">
-							<div class="slide_info">
-								<div class="slide_info_titulo">Lorem ipsum dolor sit amet</div>
-								<div class="slide_info_subtitulo">Aliquam nec lorem non ex bibendum sollicitudin. Curabitur et nibh ullamcorper.</div>
-							</div>
-						</div>
-						<div class="slide" style="background-image: url('assets/images/imagem4.jfif');">
-							<div class="slide_info">
-								<div class="slide_info_titulo">Lorem ipsum dolor sit amet</div>
-								<div class="slide_info_subtitulo">Aliquam nec lorem non ex bibendum sollicitudin. Curabitur et nibh ullamcorper.</div>
-							</div>
-						</div>
-						<div class="slide" style="background-image: url('assets/images/imagem5.jfif');">
-							<div class="slide_info">
-								<div class="slide_info_titulo">Lorem ipsum dolor sit amet</div>
-								<div class="slide_info_subtitulo">Aliquam nec lorem non ex bibendum sollicitudin. Curabitur et nibh ullamcorper.</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+	<!-- <div class="container">
+		<img src=""
+	</div> -->
+	
+		
+	<div style="display: none; flex-direction: column; align-items: center; justify-content: center;" id="form-news"> 
+		<div >
+			<input type="text" id="title" placeholder="Titulo">
+			<input type="text" id="description" placeholder="Descrição">
+			<input type="file" id="file">
+			<button onclick="cadastrar(event)">Cadastarr</button>
 		</div>
 	</div>
+	</div>
+
 
 	<div class="cards-container">
 		<section id="cards">
 		</section>
 	</div>
-	<div class="card">
-		<img src="assets/images/exemplo1.jpg" alt="Imagem da Notícia">
-		<h3>Título da Notícia</h3>
-		<p>Descrição da notícia com um resumo curto para atrair o leitor.</p>
-	</div>
+	
 </body>
+<script type="text/javascript" src="News.js"></script>
+
 </html>

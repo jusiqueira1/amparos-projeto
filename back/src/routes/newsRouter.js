@@ -1,8 +1,15 @@
-// const express = require("express");
-// const router = express.Router();
+const express = require("express");
+const router = express.Router();
 
-// const { fetchNews } = require('../controller/newsController');
+const { testDisplayNews,  pegarNoticia} = require('../controller/newsController');
 
-// router.post("/news", fetchNews);
+router.post("/news", testDisplayNews);
 
-// module.exports = router;
+router.get('/dados', pegarNoticia);
+
+
+
+module.exports = router;
+
+
+
