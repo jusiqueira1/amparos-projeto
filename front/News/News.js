@@ -1,57 +1,73 @@
-const bolinhas = document.querySelectorAll('.bolinha');
-
-function mudarSlide(index) {
-    bolinhas.forEach(bolinha => bolinha.classList.remove('active'));
-
-    bolinhas[index].classList.add('active');
-
-}
-
-bolinhas.forEach((bolinha, index) => {
-    bolinha.addEventListener('click', () => mudarSlide(index));
-});
-
-
-
-
-
-function displayNews(newsArray) {
+window.addEventListener('load', async () => {
     const newsContainer = document.getElementById("cards");
     newsContainer.innerHTML = '';
 
-    newsArray.forEach(news => {
+    let response = await fetch("http://localhost:3004/api/noticias", {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    let result = await response.json();
+
+    let noticias = result.data;
+
+    noticias.forEach(news => {
         const newsItem = document.createElement('div');
         newsItem.classList.add('card');
+        let images = "http://localhost:3004/uploads/"
 
         newsItem.innerHTML = `
-            <img src="assets/images/exemplo1.jpg" alt="Imagem da Notícia">
-            <h3>${news.titulo || 'Título não disponível'}</h3>
+            <img src="${images}${news.imagem || 'fundoroxo.png'}" alt="Imagem da Notícia">
+            <h3>${news.title || 'Título não disponível'}</h3>
             <p>${news.descricao || 'Descrição não disponível'}</p>
-            <button>Leia Mais</button>
+            <button onclick="openModal('${news.title}')">Leia Mais</button>
         `;
 
         newsContainer.appendChild(newsItem);
     });
-}
-function testDisplayNews() {
-    const testNews = [
-        { titulo: 'Notícia 1', descricao: 'Descrição da notícia 1' },
-        { titulo: 'Notícia 2', descricao: 'Descrição da notícia 2' }
-    ];
-    displayNews(testNews);
-}
-
-testDisplayNews();
-
-//fetchNews();
-
+})
 
 window.addEventListener('load', () => {
     let perfil = localStorage.getItem('perfil');
+    let div = document.getElementById('form-news');
 
-    let div = document.getElementById('form-news')
-
-    if(perfil === 'admin') {
-        div.style.display = 'block'
+    if (perfil === 'admin') {
+        div.style.display = 'block';
     }
-})
+});
+
+async function cadastrar(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    let usuario = JSON.parse(localStorage.getItem("usuario"))[0];
+
+    const idUsuario = usuario.id;
+    const title = document.getElementById('title').value;
+    const description = document.getElementById('description').value;
+    const link = document.getElementById('link').value;
+    const file = document.getElementById('file').files[0];
+
+    let formData = new FormData();
+
+    formData.append("idUsuario", idUsuario)
+    formData.append("title", title)
+    formData.append("description", description)
+    formData.append("link", link)
+    formData.append("file", file)
+
+    const response = await fetch("http://localhost:3004/api/noticias/cadastrar", {
+        method: 'POST',
+        body: formData
+    })
+
+    const results = await response.json()
+
+    if (results.success) {
+        alert(results.message)
+    } else {
+        alert(results.message)
+    }
+}
+

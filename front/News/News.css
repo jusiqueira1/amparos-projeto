@@ -72,29 +72,107 @@
     }
 
     body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        height: 130vh;
-        background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(126, 104, 255));
-        align-items: center;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(130, 6, 146));
+        background-image: url('fundoroxo.png');
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center top;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        position: relative;
+    }
+    .banner-img {
+        width: 700px ;
         justify-content: center;
-        margin-left: 320px;
-        margin-top: 100px;
+        align-items: center;
+        margin-left: 5%;
+        height: 300px; /* Define a altura que você deseja */
+        object-fit: cover; /* Corta a imagem para preencher o container */
+    }
+    #Frase-noticias {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 800px;
+        font-size: 18px;
+        margin: 20px 0 20px 300px; /* Define a margem à esquerda (50px neste exemplo) */
+        color: #000;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px 5px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgb(51, 0, 53);
+        text-align: center;
+        z-index: 4;
+        white-space: pre-wrap;
     }
     
-    
+ #form-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 32%;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 7px;
+    padding: 40px;
+    height: 250px; 
+    width: 500px; /* Você pode ajustar a largura conforme necessário */
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    z-index: 1; 
+}
 
+#form-news h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2em; /* Ajuste o tamanho se necessário */
+    text-align: center;
+    color: #333;
+}
 
-    .container {
-        width: 90%;
-        max-width: 1200px;
+#form-news input {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border-radius: 5px; 
+    transition: all linear 160ms;
+    outline: none;
+    width: 100%; /* Para ocupar toda a largura do container */
+}
+
+#form-news button {
+    background-color: #bd02c4;
+    color: #fff;
+    height: 50px; 
+    font-size: 16px; 
+    width: 100%; 
+    border: none;
+    border-radius: 5px; 
+    transition: all linear 160ms;
+    cursor: pointer;
+    margin-top: 20px; 
+}
+
+#form-news button:hover {
+    transform: scale(1.05);
+    background-color: #860097;
+}
+
+    .container {        
         margin: 20px auto;
         z-index: 3; 
         position: relative;
         flex: 1;
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
+        margin-top: 50px;
     }
+
+
     .cards-container {
         width: 100%;
         display: flex;
@@ -112,7 +190,7 @@
     }
 
     .card {
-        background-color: rgb(202, 145, 206);
+        background-color: rgb(87, 0, 94);
         width: calc(33% - 20px);
         padding: 20px;
         margin-left: 230px;

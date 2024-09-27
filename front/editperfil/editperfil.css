@@ -75,6 +75,7 @@ ul li.item-menu a .icon > i {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(126, 104, 255));
+    background-image: url('fundomenor.png');
     display: flex;
     justify-content: center;
     align-items: center;

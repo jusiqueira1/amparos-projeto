@@ -71,12 +71,17 @@ ul li.item-menu a .icon > i {
     margin-left: 10px;
 }
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 130vh;
-    background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(126, 104, 255));
-    align-items: center;
-    justify-content: center;
-   
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(130, 6, 146));
+    background-image: url('fundomenor.png');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center top;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
 }
 
 h3 {
@@ -89,24 +94,26 @@ h3 {
 .cards {
     display: flex;
     width: 500px;
-    padding: 45px;
+    padding: 4px;
     flex-direction: column;
     margin-top: 5px;
+    margin-left: 30px;
+
 }
 
 .card {
-    background-image: linear-gradient(163deg, #962bb1 0%, #ad69fa 100%);
-    box-shadow: 0px 4px 5px 6px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(163deg, #a45cb6 0%, #ad69fa 100%);
+    box-shadow: 0px 4px 5px 6px rgba(108, 11, 128, 0.979);
     max-width: 180px;
     text-align: center;
     margin-bottom: 25px;
     font-family: arial;
+
     border-radius: 10px ;
     width: 220px;
-    
-    min-height: 38vh;
     transition: all 0.25s cubic-bezier(0, 0, 0, 1);
-
+    align-items: center;
+    justify-content: center;
 
     
 }
@@ -118,7 +125,7 @@ h3 {
 
 .card2 {
   width: 180px;
-  min-height: 38vh;
+  min-height: 20vh;
   background-color: #ffffff;
   border-radius: 10px;
   transition: all 0.25s cubic-bezier(0, 0, 0, 1);
@@ -138,7 +145,7 @@ h3 {
     outline: 0;
     text-transform: none;
     color: rgb(255, 255, 255);
-    background-color: #79279c;
+    background-color: #50096e;
     cursor: pointer;
     width: 100%;
     height: 10vh;
@@ -174,14 +181,13 @@ img{
 
   .container {
     display: flex;
-    margin-top: 20px;
+    margin-top: 10px;
     justify-content: center;
     align-items: center;
     margin-left: 33%;
     transform: translate(-50%, -50%); 
     width: 500px;
-    height: 550  px;
-    background-color: rgba(250, 223, 255, 0.5); 
+    background-color: rgb(188, 97, 204); 
     border-radius: 10px;
     box-shadow: 0 5px 40px rgba(0, 0, 0, 0.3);
     animation: containerAnimation 3s infinite alternate ease-in-out;
