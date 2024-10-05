@@ -73,15 +73,15 @@
 
     body {
         font-family: 'Arial', sans-serif;
-        background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(130, 6, 146));
-        background-image: url('fundoroxo.png');
+        background-color: #9619af;
+        /* background-image: url('fundodaatela.png'); */
         background-size: cover; 
         background-repeat: no-repeat;
         background-position: center top;
         padding: 0;
+        margin-bottom: 400px;
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
         position: relative;
     }
     .banner-img {
@@ -89,18 +89,21 @@
         justify-content: center;
         align-items: center;
         margin-left: 5%;
-        height: 300px; /* Define a altura que você deseja */
-        object-fit: cover; /* Corta a imagem para preencher o container */
+        border-radius: 10px 10px 10px 10px;
+        height: 300px; 
+        box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.548); 
+        object-fit: cover; 
     }
+
     #Frase-noticias {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 800px;
         font-size: 18px;
-        margin: 20px 0 20px 300px; /* Define a margem à esquerda (50px neste exemplo) */
+        margin: 20px 0 20px 300px; 
         color: #000;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: #ffffffbe;
         padding: 5px 5px;
         border-radius: 8px;
         box-shadow: 0 0 10px rgb(51, 0, 53);
@@ -115,20 +118,37 @@
     align-items: center;
     margin-left: 32%;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #ffffffbe;
     border-radius: 7px;
     padding: 40px;
-    height: 250px; 
-    width: 500px; /* Você pode ajustar a largura conforme necessário */
+    height: 350px; 
+    width: 500px; 
     box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
     z-index: 1; 
+}
+
+#Antesdasnoticias {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 800px;
+        font-size: 18px;
+        margin: 20px 0 20px 300px; 
+        color: #000;
+        background-color: #ffffffbe;
+        padding: 5px 5px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgb(51, 0, 53);
+        text-align: center;
+        z-index: 4;
+        white-space: pre-wrap;
 }
 
 #form-news h1 {
     padding: 0;
     margin: 0;
     font-weight: 500;
-    font-size: 2em; /* Ajuste o tamanho se necessário */
+    font-size: 2em;
     text-align: center;
     color: #333;
 }
@@ -136,12 +156,14 @@
 #form-news input {
     padding: 15px;
     font-size: 14px;
-    border: 1px solid #ccc;
+    border: 1px solid   #ffffffbe;
+    ;
+    background-color: #ffffffbe;
     margin-bottom: 20px;
     border-radius: 5px; 
     transition: all linear 160ms;
     outline: none;
-    width: 100%; /* Para ocupar toda a largura do container */
+    width: 100%; 
 }
 
 #form-news button {
@@ -178,7 +200,6 @@
         display: flex;
         justify-content: center;
         color: #ffffff;
-        margin-top: 20px; 
     }
         
     section {
@@ -191,12 +212,14 @@
 
     .card {
         background-color: rgb(87, 0, 94);
-        width: calc(33% - 20px);
+        width: 450px;
         padding: 20px;
-        margin-left: 230px;
+        height: 550px;
+        margin-left: 160px;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         text-align: center;
+        margin-top: 100px;
         justify-content: center;
         transition: transform 0.2s;
     }

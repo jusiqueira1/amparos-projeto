@@ -9,7 +9,7 @@ async function editarPerfil(request, response) {
         request.body.nome,
         request.body.idade,
         request.body.email,
-        request.body.cellphone,  // Ajuste para "cellphone"
+        request.body.cellphone,  
         request.file.filename
     ];
     console.log(params);

@@ -39,7 +39,7 @@ window.addEventListener('load', () => {
 });
 
 async function cadastrar(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault(); 
 
     let usuario = JSON.parse(localStorage.getItem("usuario"))[0];
 
