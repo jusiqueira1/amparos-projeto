@@ -1,13 +1,13 @@
 const connection = require('../config/db');
 
 async function login(request, response) {
-    const query = 'SELECT email, senha, perfil FROM usuarios WHERE email = ?;';
+    const query = 'SELECT email, senha, perfil, id FROM usuarios WHERE email = ?;';
 
     const params = Array(
         request.body.email,
     );
     console.log(params)
-
+    
     connection.query(query, params, (err, results) => {
         console.log(err, results)
         if(results.length > 0) {

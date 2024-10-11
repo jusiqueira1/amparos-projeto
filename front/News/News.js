@@ -19,10 +19,16 @@ window.addEventListener('load', async () => {
         let images = "http://localhost:3004/uploads/"
 
         newsItem.innerHTML = `
-            <img src="${images}${news.imagem || 'fundoroxo.png'}" alt="Imagem da Notícia">
-            <h3>${news.title || 'Título não disponível'}</h3>
-            <p>${news.descricao || 'Descrição não disponível'}</p>
-            <button onclick="openModal('${news.title}')">Leia Mais</button>
+            <div class="imagem">
+                 <img src="${images}${news.imagem || 'fundoroxo.png'}" alt="Imagem da Notícia">
+            </div>
+             <div class="info_noticias">
+                <h3>${news.title || 'Título não disponível'}</h3>
+                <p>${news.descricao || 'Descrição não disponível'}</p>
+                <button onclick="window.open('${news.link}', '_blank')">Leia Mais</button>
+
+             </div>
+            
         `;
 
         newsContainer.appendChild(newsItem);

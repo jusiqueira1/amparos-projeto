@@ -4,7 +4,7 @@ const connection = require('../config/db');
 const bcrypt = require('bcrypt');
 
 async function storeUser(request, response) {
-    const query = 'INSERT INTO users(nome, email, senha) VALUES(?,?,?);';
+    const query = 'INSERT INTO usuarios(nome, email, senha) VALUES(?,?,?)';
 
     const params = Array(
         request.body.nome,

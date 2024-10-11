@@ -9,6 +9,8 @@ const profissionalRouter = require('./routes/profissionalRouter');
 const chatRouter = require('./routes/chatRouter');
 const editRouter = require('./routes/editRouter');
 const newsRouter = require('./routes/newsRouter');
+
+const perfilRouter = require('./routes/perfilRouter');
  
 app.use(express.json());
 app.use(cors())
@@ -20,6 +22,8 @@ app.use('/api', profissionalRouter);
 app.use('/api', chatRouter);
 app.use('/api', editRouter);
 app.use('/api', newsRouter);
+
+app.use('/api', perfilRouter);
  
 app.use('/uploads', express.static(__dirname + '\\public'));
  

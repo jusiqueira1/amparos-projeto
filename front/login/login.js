@@ -24,7 +24,8 @@ async function handleLogin(event) {
     let result = await response.json();
  
     if (result.success) {
-        localStorage.setItem('perfil', result.data.perfil)
+  
+        localStorage.setItem('perfil', result.data.id)
         window.location.href = "../botaodopanico/inicio.html";
     } else {
         alert("Falha ao fazer login. Verifique suas credenciais.");
