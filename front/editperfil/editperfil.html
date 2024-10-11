@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do Usuário</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="editperfil.css">
 </head>
 <body>
@@ -16,22 +17,18 @@
             <p><strong>Email:</strong> <span id="email"></span></p>
             <p><strong>Telefone:</strong> <span id="telefoneExibido"></span></p>
 
-            <button class="editar">Editar Perfil</button>
+            <button class="editar" id="editarButton">Editar Perfil</button>
 
-            <div class="formLogin" style="display: none;">
+            <div id="formLogin" class="formLogin" style="display: none;">
+                <label for="nomeInput">Nome</label>
+                <input type="text" id="nomeInput" placeholder="Digite seu nome" />
 
-                <label for="senha">Nome</label>
-                <input type="name" id="s=nome" placeholder="Digite seu none" />
+                <label for="emailInput">E-mail</label>
+                <input type="email" id="emailInput" placeholder="Digite seu e-mail" autofocus="true" />
 
-                <label for="email">E-mail</label>
-                <input type="email" id="email" placeholder="Digite seu e-mail" autofocus="true" />
-    
-              
-    
-                <button id="loginButton">Salvar!</button>
+                <button id="editButton">Salvar!</button>
             </div>
         </div>
-
 
         <div id="userImage">
             <img id="imagemPerfil" src="" alt="Imagem de Perfil" />

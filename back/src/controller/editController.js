@@ -1,25 +1,20 @@
 const connection = require('../config/db');
 
 async function editarPerfil(request, response) {
-    if (!request.file) {
-        return response.status(400).json({ success: false, message: 'Arquivo de imagem é obrigatório.' });
-    }
+    const clienteId = request.body.cliente_id; 
 
     let params = [
         request.body.nome,
-        request.body.idade,
         request.body.email,
-        request.body.cellphone,  
-        request.file.filename
+        clienteId 
     ];
-    console.log(params);
 
-    let query = "INSERT INTO editperfil(nome, idade, email, cellphone, imagem) VALUES (?, ?, ?, ?, ?);";
+    let query = "UPDATE usuarios SET nome = ?, email = ? WHERE id = ?;";
 
     connection.query(query, params, (err, results) => {
         if (err) {
-            console.error("Erro ao inserir no banco de dados:", err);
-            response.status(500).json({ success: false, message: "Erro ao inserir no banco de dados" });
+            console.error("Erro ao atualizar no banco de dados:", err);
+            return response.status(500).json({ success: false, message: "Erro ao atualizar o perfil" });
         } else {
             response.status(200).json({ success: true, message: "Perfil salvo com sucesso" });
         }

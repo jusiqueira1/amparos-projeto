@@ -225,62 +225,54 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
  
 
-function atualizarFotoPerfil(fotoPerfil) {
-    const fotoPerfilSrc = fotoPerfil ? `http://localhost:3005/upload/${fotoPerfil}?t=${new Date().getTime()}` : 'default.png';
-    document.getElementById('foto_perfil').src = fotoPerfilSrc;
- 
-    document.getElementById('foto_perfil').addEventListener('click', () => {
-        document.getElementById('previewImg').src = document.getElementById('foto_perfil').src;
-        document.getElementById('modal').style.display = 'block';
-    });
- 
-    document.getElementById('close').addEventListener('click', () => {
-        document.getElementById('modal').style.display = 'none';
-    });
- 
-    document.getElementById('trocarFotoBtn').addEventListener('click', () => {
-        document.getElementById('fileInput').click();
-    });
- 
-    document.getElementById('fileInput').addEventListener('change', (event) => {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = () => {
-                document.getElementById('previewImg').src = reader.result;
-                document.getElementById('okBtn').style.display = 'block';
-            };
-            reader.readAsDataURL(file);
-        }
-    });
- 
-    document.getElementById('okBtn').addEventListener('click', enviarNovaFotoPerfil);
+
+function toggleModal() {
+    const modal = document.getElementById('formLogin');
+    if (modal.style.display === 'none' || modal.style.display === '') {
+        modal.style.display = 'block'; 
+    } else {
+        modal.style.display = 'none'; 
+    }
 }
- 
-async function enviarNovasInformacoes() {
+
+document.getElementById('editarButton').addEventListener('click', toggleModal);
+
+document.getElementById('editButton').addEventListener('click', () => {
+    toggleModal(); 
+});
+
+document.getElementById('editarButton').addEventListener('click', () => {
+    document.getElementById('nomeInput').value = document.getElementById('nome').textContent;
+    document.getElementById('emailInput').value = document.getElementById('email').textContent;
+    document.getElementById('formLogin').style.display = 'block';
+});
+
+document.getElementById('editButton').addEventListener('click', async () => {
     const formData = new FormData();
-    const file = document.getElementById('fileInput').files[0];
-    const clienteId = localStorage.getItem('id_cliente');
-    formData.append('cliente_id', clienteId);
-    formData.append('foto_perfil', file);
- 
+    const nome = document.getElementById('nomeInput').value;
+    const email = document.getElementById('emailInput').value;
+
+    formData.append('nome', nome);
+    formData.append('email', email);
+
     try {
-        const response = await fetch('http://localhost:3005/api/store/update/foto', {
+        const response = await fetch('http://localhost:3004/api/edit/perfil', {
             method: 'POST',
             body: formData
         });
- 
+
         const result = await response.json();
- 
+
         if (result.success) {
-            document.getElementById('foto_perfil');
+            document.getElementById('nome').textContent = nome;
+            document.getElementById('email').textContent = email;
             Swal.fire({
                 title: 'Sucesso!',
-                text: 'Foto de perfil atualizada.',
+                text: 'Informações de perfil atualizadas!',
                 icon: 'success',
                 confirmButtonText: 'OK'
             });
-            document.getElementById('modal').style.display = 'none';
+            document.getElementById('formLogin').style.display = 'none';
         } else {
             Swal.fire({
                 title: 'Erro!',
@@ -292,9 +284,9 @@ async function enviarNovasInformacoes() {
     } catch (error) {
         Swal.fire({
             title: 'Erro!',
-            text: 'Erro ao enviar a foto.',
+            text: 'Erro ao enviar as informações.',
             icon: 'error',
             confirmButtonText: 'OK'
         });
     }
-}
+});
