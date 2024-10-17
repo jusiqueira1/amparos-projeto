@@ -72,7 +72,7 @@
                 Insira as informações da notícia:       </p>
         </div>
            
-        <div style=" flex-direction: column; align-items: center; justify-content: center;" id="form-news">
+        <!-- <div style=" flex-direction: column; align-items: center; justify-content: center;" id="form-news">
             <div >
                 <input type="text" id="title" placeholder="Titulo">
                 <input type="text" id="description" placeholder="Descrição">
@@ -81,12 +81,26 @@
                 <button onclick="cadastrar(event)">Enviar</button>
             </div>
         </div>
+        </div> -->
+        <div style="flex-direction: column; align-items: center; justify-content: center;" id="form-news">
+            <div>
+                <input type="text" id="title" placeholder="Titulo">
+                <input type="text" id="description" placeholder="Descrição">
+                <input type="text" id="link" placeholder="Link">
+                
+                <div style="position: relative; display: inline-block;">
+                    <input type="file" id="file" style="display: none;" onchange="updateFileName()">
+                    <img src="arquivo.png" alt="Escolher arquivo" style="cursor: pointer; width: 50px; height: 30px;" onclick="document.getElementById('file').click();">
+                </div>
+        
+                <span id="file-name" style="margin-top: 10px;"></span>
+        
+                <button onclick="cadastrar(event)">Enviar</button>
+            </div>
         </div>
+        
     </section>
 
-    
-    <!-- <div id="linha">
-    </div> -->
     <div id="Antesdasnoticias">
         <p> Fique ligado com as principais notícias do momento!
             Abaixo temos as principais informações de casos atuais sobre feminicídio, violência, assédio ou machismo.
