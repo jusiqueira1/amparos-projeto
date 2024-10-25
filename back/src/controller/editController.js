@@ -6,6 +6,7 @@ async function editarPerfil(req, res) {
         const nome = req.body.nome;
         const idade = req.body.idade;
         const email = req.body.email;
+        
 
         if (!clienteId || !nome || !idade || !email) {
             return res.status(400).json({
