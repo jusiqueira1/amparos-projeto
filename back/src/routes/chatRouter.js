@@ -7,10 +7,10 @@ const { criarPrompt } = require('../controller/chatController');
 * @swagger
 * /chat:
 *   post:
-*     summary: Gerar chat
+*     summary: Gerar Chatbot
 *     responses:
 *        200:
-*           description: Gera o chatbot
+*           description: Essa função traz a funcionalidade do Chatbot para a página, permitindo sua exibição também.
 *           content:
 *             application/json:
 *               schema:

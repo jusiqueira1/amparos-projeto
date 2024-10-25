@@ -9,10 +9,10 @@ const { storeConsulta } = require('../controller/consultaController')
 * @swagger
 * /register:
 *   post:
-*     summary: Exibir consulta
+*     summary: Registra consulta de dados
 *     responses:
 *        200:
-*           description: Exibe a consulta feita pelo usuário
+*           description: Essa função registra os dados inseridos no login da usuária.
 *           content:
 *             application/json:
 *               schema:
@@ -29,10 +29,10 @@ router.post('/register', storeUser);
 * @swagger
 * /agendar:
 *   post:
-*     summary: Agendar consulta
+*     summary: Exibe e certificado o login
 *     responses:
 *        200:
-*           description: Agenda a consulta do usuário
+*           description: Essa função exibe e certificado de que os dados do login estão inseridos corretamente.
 *           content:
 *             application/json:
 *               schema:

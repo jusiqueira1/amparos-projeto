@@ -10,7 +10,7 @@ const { login, salvarProfissional , listProfissionais } = require('../controller
 *     summary: Salvar profissional
 *     responses:
 *        200:
-*           description: Salva o perfil do usuário profissional
+*           description: Salva os dados do cadastro da usuária profissional.
 *           content:
 *             application/json:
 *               schema:
@@ -27,7 +27,7 @@ router.post('/salvar/profissional', upload.single('file'), salvarProfissional);
 *     summary: Exibir profissional
 *     responses:
 *        200:
-*           description: Exibe o perfil do usuário profissional
+*           description: Exibe os dados cadastrados das profissionais.
 *           content:
 *             application/json:
 *               schema:
@@ -44,7 +44,7 @@ router.get('/profissionais', listProfissionais);
 *     summary: Login da profissional
 *     responses:
 *        200:
-*           description: Faz o login do usuário profissional
+*           description: Essa função cuida da certificação das informações inseridas no cadastro das profissionais e verifica se estão condizentes.
 *           content:
 *             application/json:
 *               schema:

@@ -6,7 +6,7 @@
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(130, 6, 146));
-    background-image: url('fundo.png');
+    background-image: url('fundobranco.png');
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center top;
@@ -19,6 +19,22 @@ body {
     position: relative;
 }
 
+
+.amparos {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 130px;
+    font-size: 50px;
+    color:#6d0d85;
+    margin-left: 650px;
+}
+/* 
+.img-amparos {
+    height:200px;
+    width: 500px;
+    margin-bottom: 170px;
+    box-shadow: 10px 10px 10px 10px solid black;
+    margin-left: 500px;
+} */
 header {
     display: flex;
     flex-direction: column;

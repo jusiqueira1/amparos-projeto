@@ -66,18 +66,21 @@
         <h2>Perfil do Usuário</h2>
         <div class="user-info">
             <p><strong>Nome:</strong> <span id="nome"></span></p>
-            <p><strong>Idade:</strong> <span id="idadeExibida"></span></p>
+            <p><strong>Idade:</strong> <span id="idade"></span></p>
             <p><strong>Email:</strong> <span id="email"></span></p>
-            <p><strong>Telefone:</strong> <span id="telefoneExibido"></span></p>
 
             <button class="editar" id="editarButton">Editar Perfil</button>
 
             <div id="formLogin" class="formLogin" style="display: none;">
                 <label for="nomeInput">Nome</label>
-                <input type="text" id="nomeInput" placeholder="Digite seu nome" />
+                <input type="text" id="nomeInput" placeholder="Insira seu nome" />
+
+                <label for="idadeInput">Idade</label>
+                <input type="age" id="idadeInput" placeholder="Insira sua idade" autofocus="true" />
 
                 <label for="emailInput">E-mail</label>
-                <input type="email" id="emailInput" placeholder="Digite seu e-mail" autofocus="true" />
+                <input type="email" id="emailInput" placeholder="Insira seu e-mail" autofocus="true" />
+
 
                 <button id="editButton">Salvar!</button>
             </div>

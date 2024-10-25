@@ -10,7 +10,7 @@ const { login } = require('../controller/loginController')
 *     summary: Fazer login
 *     responses:
 *        200:
-*           description: Faz a consulta do usuário
+*           description: Essa função se certifica de que os dados da usuária estão em sequência dos inseridos no cadastro.
 *           content:
 *             application/json:
 *               schema:

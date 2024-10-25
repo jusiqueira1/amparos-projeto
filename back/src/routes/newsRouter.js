@@ -11,7 +11,7 @@ const { registerNews, listNews} = require('../controller/newsController');
 *     summary: Cadastrar notícias
 *     responses:
 *        200:
-*           description: Cadastra as notícias do site
+*           description: Salva os dados das notícias cadastradas pelos administradores, recebendo a imagem,título,descrição e link
 *           content:
 *             application/json:
 *               schema:
@@ -28,7 +28,7 @@ router.post('/noticias/cadastrar', upload.single('file'), registerNews);
 *     summary: Exibir notícias
 *     responses:
 *        200:
-*           description: Exibe as notícias no site
+*           description: Exibe as notícias cadastradas em formato de cards,gerando suas informações.
 *           content:
 *             application/json:
 *               schema:

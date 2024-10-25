@@ -9,7 +9,7 @@ const { perfil } = require('../controller/perfilController')
 *     summary: Exibir perfil
 *     responses:
 *        200:
-*           description: Exibe o perfil do usuário
+*           description: Exibe os dados inseridos no perfil da usuária.
 *           content:
 *             application/json:
 *               schema:

@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', async () => {
  
         if (clienteResult.success) {
             document.getElementById('nome').textContent = clienteResult.data.nome;
+            document.getElementById('idade').textContent = clienteResult.data.idade;
             document.getElementById('email').textContent = clienteResult.data.email;
  
         } else {
@@ -65,6 +66,7 @@ document.getElementById('editButton').addEventListener('click', () => {
 
 document.getElementById('editarButton').addEventListener('click', () => {
     document.getElementById('nomeInput').value = document.getElementById('nome').textContent;
+    document.getElementById('idadeInput').value = document.getElementById('idade').textContent;
     document.getElementById('emailInput').value = document.getElementById('email').textContent;
     document.getElementById('formLogin').style.display = 'block';
 });
@@ -72,6 +74,7 @@ document.getElementById('editarButton').addEventListener('click', () => {
 
 document.getElementById('editButton').addEventListener('click', async () => {
     const nome = document.getElementById('nomeInput').value;
+    const idade = document.getElementById('idadeInput').value;
     const email = document.getElementById('emailInput').value;
     const clienteId = localStorage.getItem('perfil');
 
@@ -94,6 +97,7 @@ document.getElementById('editButton').addEventListener('click', async () => {
         },
         body: JSON.stringify({
             nome: nome,
+            idade: idade,
             email: email,
             cliente_id: clienteId
         })
@@ -103,6 +107,7 @@ document.getElementById('editButton').addEventListener('click', async () => {
 
     if (result.success) {
         document.getElementById('nome').textContent = nome;
+        document.getElementById('idade').textContent = idade;
         document.getElementById('email').textContent = email;
 
         Swal.fire({

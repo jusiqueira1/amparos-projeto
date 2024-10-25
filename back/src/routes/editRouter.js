@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const upload = require('../config/multer');
 
-const { editarPerfil, listarPerfil} = require('../controller/editController');
+const { editarPerfil} = require('../controller/editController');
 
 // router.post('/edit/perfil', upload.single('file'), editarPerfil);  
 
@@ -12,7 +12,7 @@ const { editarPerfil, listarPerfil} = require('../controller/editController');
 *     summary: Editar perfil
 *     responses:
 *        200:
-*           description: Edita o perfil do usuário
+*           description: Essa função edita os dados inseridos da usuária, modificando se ela preferir.
 *           content:
 *             application/json:
 *               schema:
@@ -21,23 +21,6 @@ const { editarPerfil, listarPerfil} = require('../controller/editController');
 *                   type: object
 */
 router.post('/edit/perfil', editarPerfil);  
-
-/**
-* @swagger
-* /editperfil:
-*   get:
-*     summary: Editar o perfil
-*     responses:
-*        200:
-*           description: Edita o perfil do usuário
-*           content:
-*             application/json:
-*               schema:
-*                 type: array
-*                 items:
-*                   type: object
-*/
-router.get('/editperfil', listarPerfil); 
 
 
 module.exports = router;

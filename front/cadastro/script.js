@@ -2,6 +2,7 @@ async function handleSubmit(event) {
     event.preventDefault();
 
     let nome = document.getElementById("nome").value;
+    let idade = document.getElementById("idade").value;
     let email = document.getElementById("email").value;
     let senha = document.getElementById("senha").value;
 
