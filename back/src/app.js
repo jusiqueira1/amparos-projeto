@@ -11,6 +11,10 @@ const editRouter = require('./routes/editRouter');
 const newsRouter = require('./routes/newsRouter');
 
 const perfilRouter = require('./routes/perfilRouter');
+
+
+
+
  
 app.use(express.json());
 app.use(cors())

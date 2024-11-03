@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro_usuaria.css">
+</head>
+<body>
+    <div class="page">
+        <img src="Group 5.png" class="background-img" alt="Tela inicial">
+        <input type="checkbox" id="saveLogin" />
+        <h3>Bem-vinda!</h3>
+        <form class="formLogin">
+            <label for="senha">Nome da usuária</label>
+            <input type="text" id="nome" placeholder="Nome de usuário" />
+
+            <label for="idade">Idade</label>
+            <input type="idade" id="idade" placeholder="Insira sua idade" autofocus="true" />
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail" autofocus="true" />
+
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" placeholder="Digite sua senha" />
+
+
+            <button class="btn" onclick="handleSubmit(event)">Acessar</button>
+            <a href="../cadastroMedicas/index.html" class="btn-cadastrar">
+                Cadastrar como médica
+            </a>
+            
+        </form>
+    </div>
+    <div class="waves-container">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+    <script src="./cadastro_usuaria.js"></script>
+</body>
+</html>
+

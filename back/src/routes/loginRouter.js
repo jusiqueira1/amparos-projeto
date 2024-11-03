@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { login } = require('../controller/loginController')
+const { loginUsuaria, loginProfissional } = require('../controller/loginController')
 
 
 /**
@@ -18,6 +18,23 @@ const { login } = require('../controller/loginController')
 *                 items:
 *                   type: object
 */
-router.post('/login', login);
+router.post('/login', loginUsuaria);
+
+/**
+* @swagger
+* /login/profissional:
+*   post:
+*     summary: Login da profissional
+*     responses:
+*        200:
+*           description: Essa função cuida da certificação das informações inseridas no cadastro das profissionais e verifica se estão condizentes.
+*           content:
+*             application/json:
+*               schema:
+*                 type: array
+*                 items:
+*                   type: object
+*/
+router.post('/login/profissional', loginProfissional);
 
 module.exports = router;

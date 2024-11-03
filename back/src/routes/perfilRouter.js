@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { perfil } = require('../controller/perfilController')
+const { getPerfilProfissional, getPerfilUsuaria } = require('../controller/perfilController')
 
 /**
 * @swagger
@@ -17,6 +17,8 @@ const { perfil } = require('../controller/perfilController')
 *                 items:
 *                   type: object
 */
-router.post('/get/perfil', perfil);
+router.post('/get/perfil/profissional', getPerfilProfissional);
+
+router.post('/get/perfil/usuaria', getPerfilUsuaria);
 
 module.exports = router;
