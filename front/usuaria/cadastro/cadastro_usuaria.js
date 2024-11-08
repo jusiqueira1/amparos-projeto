@@ -21,7 +21,7 @@ async function handleSubmit(event) {
     if (result.success) {
         alert("Bora")
         
-        window.location.href = "../login/login.html";
+        window.location.href = "../login/login_usuaria.html";
 
     } else {
         alert("Nao deu");

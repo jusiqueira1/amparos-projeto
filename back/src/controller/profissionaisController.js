@@ -95,8 +95,7 @@
 const connection = require("../config/db");
 async function salvarProfissional(request, response) {
     const { nome, email, password, especialidade } = request.body;
-    const file = request.file ? request.file.filename : 'padrao.png'; // Use um nome padrão se nenhum arquivo for enviado
-
+    const file = request.file ? request.file.filename : 'padrao.png';
     if (!nome || !email || !file || !password || !especialidade) {
         return response.status(400).json({ success: false, message: "Preencha todos os campos." });
     }
