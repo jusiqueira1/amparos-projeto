@@ -1,17 +1,18 @@
-
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'Oranienbaum', Arial, Helvetica, sans-serif;
 }
 
-h1{
+h1 {
     margin-left: 500px;
 }
 
+ 
 nav.menu-lateral {
-    width: 50px;
+    width: 45px;
     height: 100%;
     background-color: rgb(202, 145, 206);
     padding: 40px 0 40px 1%;
@@ -22,58 +23,54 @@ nav.menu-lateral {
     transition: width 0.3s ease;
     overflow: hidden;
     white-space: nowrap;
-
-}
-
-nav.menu-lateral:hover {
+    z-index: 100;
+  }
+  
+  nav.menu-lateral:hover {
     width: 250px;
-}
-
-.btn-expandir {
+  }
+  
+  .btn-expandir {
     width: 100%;
     padding-left: 10px;
-}
-
-.btn-expandir > i {
+  }
+  
+  .btn-expandir > i {
     color: purple;
     font-size: 24px;
     cursor: pointer;
-}
-
-ul {
+  }
+  
+  ul {
     height: 100%;
     list-style-type: none;
     padding: 0;
-}
-
-ul li.item-menu a {
+  }
+  
+  ul li.item-menu a {
     color: white;
     text-decoration: none;
-    margin-left: -5px;
     font-size: 20px;
     padding: 20px 4%;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
     line-height: 40px;
-}
-
-ul li.item-menu:hover {
+  }
+  
+  ul li.item-menu:hover {
     background: rgb(121, 43, 128);
-}
-
-ul li.item-menu a .txt-link {
-    margin-left: 40px;
-}
-
-ul li.item-menu a .icon > i {
+  }
+  
+  ul li.item-menu a .txt-link {
+    margin-left: 20px;
+  }
+  
+  ul li.item-menu a .icon > i {
     font-size: 30px;
-    margin-left: 10px;
-}
+  }
+  
 
- 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(126, 104, 255));
     background-image: url('/front/imagens/fundo_branco.png');
     display: flex;
@@ -81,109 +78,157 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-  }
- .Dadosdousuario {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Dadosdousuario {
     background-color: rgb(162, 20, 228);
     border-radius: 15px;
     padding: 40px;
     width: 900px;
-    
+    height: 800px;
     text-align: center;
     box-shadow: 0px 0px 30px 10px rgb(255, 255, 255);
- }
- .profile {
-    margin-bottom: 20px;
- }
+}
 
- h2 {
+.profile {
+    margin-bottom: 20px;
+}
+
+h2 {
     color: white;
     font-size: 1.5em;
     margin: 0;
- }
+}
 
-.user-info button{
+.user-info button {
     width: 300px;
     margin-top: 20px;
     color: #ffffff;
     height: 40px;
-    border-radius: 10px 10px 10px 10px ;
+    border-radius: 10px 10px 10px 10px;
     background-color: #45004d;
 }
+
 #perfilImagem {
-    border-radius: 20px ;
+    border-radius: 20px;
     height: 150px;
-    width:150px;
+    width: 150px;
 }
 
-.user-info{
-
+.user-info {
     margin-top: 10px;
 }
- form input {
-    width: 100%;
 
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
+/* Estilos para o formulário */
+#formLogin {
+    display: block;
+    font-family: Arial, sans-serif;
+    width: 40%; /* Faz com que ocupe 100% do espaço disponível */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.3);
-    color: white;
-    font-size: 1em;
- }
- form input::placeholder {
-    color: white;
-    opacity: 0.8;
- }
- form input:focus {
-    outline: none;
-    background-color: rgba(255, 255, 255, 0.5);
- }
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
 
- 
-.salvarButton {
+#formLogin label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    color: #333;
+    display: block;
+}
+
+#formLogin input {
+    display: block;
+    width:93%; /* Ocupa toda a largura */
+    padding: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 8px 0 15px 0;
+    border-radius: 8px;
+    border: 2px solid #a24cb7;
+
+    background-color: #f0f0f0;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+#formLogin input:focus {
+    outline: none;
+    border-color: #9b3fa1;
+    background-color: #e8d9f1;
+    box-shadow: 0 0 8px rgba(162, 76, 183, 0.5);
+}
+
+#formLogin button {
+    display: block;
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    background-color: #a24cb7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#formLogin button:hover {
+    background-color: #9619af;
+}
+
+/* Centralizando o botão de salvar */
+#formLogin .user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#editarButton {
     display: inline-block;
     background-color: #6b006e;
     color: #fff;
-    font-size: 14px; 
-    border: none; 
-    border-radius: 20px; 
-    padding: 10px 20px; 
-    text-align: center; 
-    text-decoration: none; 
-    transition: background-color 160ms linear, transform 160ms linear; 
-    cursor: pointer; 
-    margin: 10px 0; 
+    font-size: 14px;
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 160ms linear, transform 160ms linear;
+    cursor: pointer;
+    margin: 10px 0;
 }
 
-.salvarButton:hover {
-    background-color: #45004d;
-    transform: scale(1.05); 
-}
-
+/* Estilos da imagem de perfil */
 #imagemPerfil {
     display: none;
     width: 200px;
     height: 170px;
 }
-  
-h2{
-    color:black;
+
+h2 {
+    color: black;
     margin-top: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
 }
 
-
+/* Estilos do card */
 .card {
-    /* background-image: linear-gradient(163deg, #a45cb6 0%, #ad69fa 100%); */
     background-color: #efb0ff;
-    border:#dd53ff solid;
+    border: #dd53ff solid;
     width: 900px;
-    height: 500px;
+    height: 550px;
     text-align: center;
     margin-bottom: 25px;
     font-family: arial;
-    border-radius: 10px ;
+    border-radius: 10px;
     align-items: center;
     justify-content: center;
-
-    
 }

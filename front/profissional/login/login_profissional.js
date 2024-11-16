@@ -3,11 +3,13 @@ document.getElementById("formLogin").addEventListener("submit", logar);
 async function logar(event) {
     event.preventDefault();
 
-    const profissionalLogin = document.getElementById("profissionalLogin").value;
+    // const profissionalLogin = document.getElementById("profissionalLogin").value;
     const email = document.getElementById("emailLogin").value;
     const password = document.getElementById("passwordLogin").value;
 
-    const data = { profissionalLogin, email, password };
+    // const data = { profissionalLogin, email, password };
+
+    const data = { email, password };
 
     try {
         const response = await fetch("http://localhost:3004/api/login/profissional", {

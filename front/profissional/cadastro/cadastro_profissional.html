@@ -1,39 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style1.css">
-
-</head>
-<body>
-    <div class="page">
-        <div class="formLogin">
-            <h1>Cadastro</h1>
-            <input type="text" id="nome" placeholder="Nome">
-            <input type="text" id="usuario" placeholder="Nome de usuario">
-            <input type="password" id="password" placeholder="Senha">
-
-            <select id="especialidade">
-                <option value="Psicóloga">Psicóloga</option>
-                <option value="Advogada">Advogada</option>
-            </select> -->
-
-            <!-- <input type="file" id="file"> -->
-            <!-- <button onclick="handleSubmit(event)" class="btn">Cadastrar</button>
-        </div>
-        <div class="waves-container">
-            <div class="wave"></div>
-            <div class="wave"></div>
-            <div class="wave"></div>
-        </div>
-    </div>
-    <script src="./script.js"></script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Profissional</title>
     <link rel="stylesheet" href="cadastro_profissional.css">
-    <link rel="icon" type="imagem/png" href="/front/imagens/logo_foto.png" />
-
+    <link rel="icon" type="image/png" href="/front/imagens/logo_foto.png" />
 </head>
 <body>
     <div class="page">
+        <img src="../../imagens/logo_amparos.png" class="background-img" alt="Tela inicial">
+
         <div class="formCadastro">
             <h1>Cadastro Profissional</h1>
             <form id="formCadastro">
@@ -58,17 +23,25 @@
                     <option value="Advogada">Advogada</option>
                 </select>
 
-                  <input type="file" id="file">
-                
+                <div class="file-input-container">
+                    <input type="file" id="file" style="display: none;">
+                    <label for="file" class="file-input-label">
+                        <img src="../../imagens/icone_arquivo.png" alt="Escolher arquivo" class="file-input-icon">
+                        Escolher arquivo
+                    </label>
+                </div>
+
                 <button type="submit" class="btn">Cadastrar</button>
             </form>
         </div>
+
         <div class="waves-container">
             <div class="wave"></div>
             <div class="wave"></div>
             <div class="wave"></div>
         </div>
     </div>
+
     <script src="./cadastro_profissional.js"></script>
 </body>
 </html>

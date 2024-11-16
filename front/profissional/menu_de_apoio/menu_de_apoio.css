@@ -1,9 +1,8 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(221, 135, 255), rgb(130, 6, 146));
     /* background-image: url('fundoroxo.png'); */
-    
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(246, 200, 255), rgba(195, 0, 255, 0.555));
     background-size: 100%; 
     background-repeat: no-repeat;
     background-position: center top;
@@ -16,12 +15,10 @@ body {
     position: relative;
 }
 
-h1 {
-    margin-left: 400px;
-}
 
+ 
 nav.menu-lateral {
-    width: 50px;
+    width: 45px;
     height: 100%;
     background-color: rgb(202, 145, 206);
     padding: 40px 0 40px 1%;
@@ -31,56 +28,53 @@ nav.menu-lateral {
     left: 0;
     transition: width 0.3s ease;
     overflow: hidden;
-    z-index: 2; 
-}
-
-nav.menu-lateral:hover {
+    white-space: nowrap;
+    z-index: 100;
+  }
+  
+  nav.menu-lateral:hover {
     width: 250px;
-}
-
-.btn-expandir {
+  }
+  
+  .btn-expandir {
     width: 100%;
     padding-left: 10px;
-}
-
-.btn-expandir > i {
+  }
+  
+  .btn-expandir > i {
     color: purple;
     font-size: 24px;
     cursor: pointer;
-}
-
-ul {
+  }
+  
+  ul {
     height: 100%;
     list-style-type: none;
     padding: 0;
-}
-
-ul li.item-menu a {
+  }
+  
+  ul li.item-menu a {
     color: white;
     text-decoration: none;
-    margin-left: -5px;
     font-size: 20px;
     padding: 20px 4%;
-    display: flex;  
+    display: flex;
     align-items: center;
-    margin-bottom: 20px;
     line-height: 40px;
-    white-space: nowrap;
-}
-
-ul li.item-menu:hover {
+  }
+  
+  ul li.item-menu:hover {
     background: rgb(121, 43, 128);
-}
-
-ul li.item-menu a .txt-link {
-    margin-left: 40px;
-}
-
-ul li.item-menu a .icon > i {
+  }
+  
+  ul li.item-menu a .txt-link {
+    margin-left: 20px;
+  }
+  
+  ul li.item-menu a .icon > i {
     font-size: 30px;
-    margin-left: 10px;
-}
-
+  }
+  
 .modal.hidden {
     display: none;
 }
@@ -101,7 +95,8 @@ ul li.item-menu a .icon > i {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    width: 80%;
+    margin-left: 120px;
+    width: 400px;
     max-width: 500px;
     position: relative;
     text-align: center;
@@ -117,7 +112,7 @@ ul li.item-menu a .icon > i {
 }
 
 .calendar {
-    width: 100%;
+    width: 95%;
     padding: 15px;
     border-radius: 5px;
     border: 2px solid #a24cb7; /* Cor da borda roxa */
@@ -135,11 +130,13 @@ ul li.item-menu a .icon > i {
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 95%;
     padding: 12px;
+
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-top: 10px;
+    margin-bottom: 20px;
     font-size: 1em;
     transition: border-color 0.3s ease;
 }
@@ -154,7 +151,8 @@ button {
     background-color: #a24cb7;
     color: white;
     border: none;
-    padding: 12px 20px;
+    padding: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
@@ -167,15 +165,12 @@ button:hover {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    z-index: 3; 
-    position: relative;
-    flex: 1;
+    width: 900px;
+    margin-left: 290px;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Estilos adicionais para o calendário */
 input[type="date"] {
     appearance: none; /* Remove estilo padrão */
     background-color: #f0f0f0; /* Cor de fundo */
@@ -200,22 +195,37 @@ section {
     margin-top: 20px;
 }
 .card {
-    background-color: rgb(255, 255, 255);
-    width: 30%;
-    padding: 20px;
-    margin-left: 430px;
+    background-color: rgb(197, 75, 221);
+    width: 500px;
+    padding: 10px;
+    height: 300px;
+    margin-left: 120px;
+    margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 10px 10px 15px rgb(128, 0, 167); /* Ajuste aqui */
+    box-shadow: 0px 0px 5px 5px rgb(66, 1, 75); /* Ajuste aqui */
     text-align: center;
     justify-content: center;
+    margin-bottom: 40px;
     transition: transform 0.2s;
+
+}
+
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 .card img {
-    width: 100px;
-    height: 100px;
+    width: 190px;
+    height:140px;
     border-radius: 50%;
     margin-bottom: 10px;
+    border: 2px solid rgb(72, 0, 82);
+    border-radius: 10px;   
 }
 
 .card:hover {
@@ -225,11 +235,12 @@ section {
 button {
     background-color: #81009e;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border: 1px solid rgb(95, 0, 104);
     cursor: pointer;
-    margin-top: 10px;
+    width: 200px;
+    
+    margin-top: -5px;
+    height: 50px;
     transition: background-color 0.3s;
 }
 
@@ -237,58 +248,29 @@ button:hover {
     background-color: #9619af;
 }
 
-.ondinhas {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 150px;
-    background-color: transparent;
-    z-index: 0;
-    overflow: hidden;
-}
 h1{
     display: flex;
     align-items: center;
-    margin-left: 500px;
+    margin-left: 215px;
+    font-size: 40px;
+    color: #3a0047;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.waves {
-    position: absolute;
+
+.background-img{
+    margin-left: 125px;
+    height: 100px;
+}
+
+#Frase-agendamento{
+    position: absolute; /* Posicionamento absoluto */
+    top: 50%; /* Alinha verticalmente ao centro */
+    transform: translate(-50%, -50%); /* Ajusta para garantir a centralização perfeita */
+    color: #81009e;
+    margin-right: 700px;
+    font-size: 1.5em; 
+    text-align: center;
     width: 100%;
-    height: 80%;
-    bottom: 0;
-    left: 0;
-}
-
-.parallax > use {
-    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
-    transform-origin: center bottom;
-}
-
-.parallax > use:nth-child(1) {
-    animation-delay: -2s;
-    animation-duration: 7s;
-}
-
-.parallax > use:nth-child(2) {
-    animation-delay: -3s;
-    animation-duration: 10s;
-}
-
-.parallax > use:nth-child(3) {
-    animation-delay: -4s;
-    animation-duration: 13s;
-}
-
-.parallax > use:nth-child(4) {
-    animation-delay: -5s;
-    animation-duration: 20s;
-}
-
-@keyframes move-forever {
-    0% {
-        transform: translate3d(-90px, 0, 0);
-    }
-    100% {
-        transform: translate3d(85px, 0, 0);
-    }
+    z-index: 3;
 }

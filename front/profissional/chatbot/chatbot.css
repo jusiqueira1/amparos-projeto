@@ -11,8 +11,9 @@ h1{
   margin-left: 500px;
 }
 
+ 
 nav.menu-lateral {
-  width: 50px;
+  width: 45px;
   height: 100%;
   background-color: rgb(202, 145, 206);
   padding: 40px 0 40px 1%;
@@ -23,7 +24,7 @@ nav.menu-lateral {
   transition: width 0.3s ease;
   overflow: hidden;
   white-space: nowrap;
-
+  z-index: 100;
 }
 
 nav.menu-lateral:hover {
@@ -50,12 +51,10 @@ ul {
 ul li.item-menu a {
   color: white;
   text-decoration: none;
-  margin-left: -5px;
   font-size: 20px;
   padding: 20px 4%;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
   line-height: 40px;
 }
 
@@ -64,14 +63,12 @@ ul li.item-menu:hover {
 }
 
 ul li.item-menu a .txt-link {
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 ul li.item-menu a .icon > i {
   font-size: 30px;
-  margin-left: 10px;
 }
-
 
 header {
   background-repeat: no-repeat;
@@ -156,7 +153,8 @@ header {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(126, 104, 255));
+  background-color: #b747da;
+  /* background-image: linear-gradient(to bottom, rgb(208, 0, 255), rgb(244, 180, 255), rgb(227, 137, 255)); */
   height: auto;
   align-items: center;
   justify-content: center;
@@ -329,9 +327,10 @@ input[type="text"] {
   width: 70vw;
   height: 90vh;
   margin-left: 20%;
+  
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 20px 5px rgba(72, 0, 82, 0.849) ;
   animation-name: floating;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 70px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     animation-duration: 3s;
     animation-iteration-count: infinite; 
     animation-timing-function: ease-in-out; 

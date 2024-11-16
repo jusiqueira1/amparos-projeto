@@ -5,14 +5,17 @@
   padding: 0;
   font-family: 'Oranienbaum',
       Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+
 }
 
 h1{
   margin-left: 500px;
 }
 
+ 
 nav.menu-lateral {
-  width: 50px;
+  width: 45px;
   height: 100%;
   background-color: rgb(202, 145, 206);
   padding: 40px 0 40px 1%;
@@ -23,7 +26,7 @@ nav.menu-lateral {
   transition: width 0.3s ease;
   overflow: hidden;
   white-space: nowrap;
-
+  z-index: 100;
 }
 
 nav.menu-lateral:hover {
@@ -50,12 +53,10 @@ ul {
 ul li.item-menu a {
   color: white;
   text-decoration: none;
-  margin-left: -5px;
   font-size: 20px;
   padding: 20px 4%;
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
   line-height: 40px;
 }
 
@@ -64,14 +65,12 @@ ul li.item-menu:hover {
 }
 
 ul li.item-menu a .txt-link {
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 ul li.item-menu a .icon > i {
   font-size: 30px;
-  margin-left: 10px;
 }
-
 
 header {
   background-repeat: no-repeat;
@@ -156,7 +155,7 @@ header {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(126, 104, 255));
+  background-color: #b747da;
   height: auto;
   align-items: center;
   justify-content: center;
@@ -352,4 +351,121 @@ input[type="text"] {
               transform: translateY(0);
             }
   
+}
+
+
+
+
+@media screen  and (min-width: 50px) and (max-width: 1013px) {
+ 
+  nav.menu-lateral {
+      display: flex;
+      height: 100%;
+      width: 100%;
+  }
+
+  nav.menu-lateral:hover {
+      width: 200px;
+  } 
+
+  #info-text {
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 300px;
+  }
+
+  #panic-button {
+      top: 100px;
+      right: 50px;
+      width: 60px;
+      height: 60px;
+  }
+
+  #panic-button img {
+      width: 60%;
+      height: 80%;
+  }
+
+  ul li.item-menu a {
+      font-size: 16px;
+      padding: 15px;
+  }
+
+  nav.menu-lateral {
+      width: 100%;
+      height: auto;
+      background-color: rgb(202, 145, 206);
+      padding: 20px;
+      box-shadow: 3px 0 0 #a24cb7;
+      position: fixed;
+      top: 90vh;
+      left: 0;
+      transition: width 0.3s ease;
+      overflow: hidden;
+      white-space: nowrap;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+  }
+
+  nav.menu-lateral ul{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+  }
+ 
+  nav.menu-lateral:hover {
+      width: 100%;
+  }
+
+  ul li.item-menu a {
+      visibility: visible;
+      margin-left: 1vw;
+      margin-right: 1vw;        
+  }
+
+  ul li.item-menu a .txt-link {
+      display: none;
+  }
+ 
+  .amparos {
+      font-size: 30px;
+      margin-left: 0;
+      margin-top: 150px;
+  }
+
+  
+
+  #panic-instruction {
+      font-size: 16px;
+      width: 250px;
+
+      right: 70px;
+      margin-bottom: 300px;
+  }
+
+  #panic-button {
+      top: 350px;
+      right: 160px;
+      width: 60px;
+      height: 60px;
+      
+  }
+
+  #panic-button img {
+      width: 90%;
+      height: 90%;
+  }
+
+  ul li.item-menu a {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+
+
+
 }

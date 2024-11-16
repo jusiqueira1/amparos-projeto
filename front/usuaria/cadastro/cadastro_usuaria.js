@@ -19,12 +19,12 @@ async function handleSubmit(event) {
     let result = await response.json();
 
     if (result.success) {
-        alert("Bora")
+        alert("Usuária Cadastrada!")
         
         window.location.href = "../login/login_usuaria.html";
 
     } else {
-        alert("Nao deu");
+        alert("Erro ao efetuar cadastro.");
     }
 }
 

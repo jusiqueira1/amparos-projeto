@@ -184,6 +184,8 @@ window.addEventListener('load', async () => {
 
     let perfil = localStorage.getItem('perfil');
     document.getElementById('cadastro_noticias').style.display = (perfil === 'admin') ? 'block' : 'none';
+    
+
 });
 
 async function cadastrar(event) {

@@ -10,8 +10,9 @@ h1{
     margin-left: 500px;
 }
 
+ 
 nav.menu-lateral {
-    width: 50px;
+    width: 45px;
     height: 100%;
     background-color: rgb(202, 145, 206);
     padding: 40px 0 40px 1%;
@@ -22,54 +23,52 @@ nav.menu-lateral {
     transition: width 0.3s ease;
     overflow: hidden;
     white-space: nowrap;
-
-}
-
-nav.menu-lateral:hover {
+    z-index: 100;
+  }
+  
+  nav.menu-lateral:hover {
     width: 250px;
-}
-
-.btn-expandir {
+  }
+  
+  .btn-expandir {
     width: 100%;
     padding-left: 10px;
-}
-
-.btn-expandir > i {
+  }
+  
+  .btn-expandir > i {
     color: purple;
     font-size: 24px;
     cursor: pointer;
-}
-
-ul {
+  }
+  
+  ul {
     height: 100%;
     list-style-type: none;
     padding: 0;
-}
-
-ul li.item-menu a {
+  }
+  
+  ul li.item-menu a {
     color: white;
     text-decoration: none;
-    margin-left: -5px;
     font-size: 20px;
     padding: 20px 4%;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
     line-height: 40px;
-}
-
-ul li.item-menu:hover {
+  }
+  
+  ul li.item-menu:hover {
     background: rgb(121, 43, 128);
-}
-
-ul li.item-menu a .txt-link {
-    margin-left: 40px;
-}
-
-ul li.item-menu a .icon > i {
+  }
+  
+  ul li.item-menu a .txt-link {
+    margin-left: 20px;
+  }
+  
+  ul li.item-menu a .icon > i {
     font-size: 30px;
-    margin-left: 10px;
-}
+  }
+  
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(130, 6, 146));
