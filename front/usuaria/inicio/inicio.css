@@ -158,9 +158,8 @@ header {
     opacity: 1;
 }
  
- 
 nav.menu-lateral {
-    width: 45px;
+    width: 50px;
     height: 100%;
     background-color: rgb(202, 145, 206);
     padding: 40px 0 40px 1%;
@@ -172,30 +171,30 @@ nav.menu-lateral {
     overflow: hidden;
     white-space: nowrap;
     z-index: 100;
-  }
-  
-  nav.menu-lateral:hover {
+}
+ 
+nav.menu-lateral:hover {
     width: 250px;
-  }
-  
-  .btn-expandir {
+}
+ 
+.btn-expandir {
     width: 100%;
     padding-left: 10px;
-  }
-  
-  .btn-expandir > i {
+}
+ 
+.btn-expandir > i {
     color: purple;
     font-size: 24px;
     cursor: pointer;
-  }
-  
-  ul {
+}
+ 
+ul {
     height: 100%;
     list-style-type: none;
     padding: 0;
-  }
-  
-  ul li.item-menu a {
+}
+ 
+ul li.item-menu a {
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -203,58 +202,32 @@ nav.menu-lateral {
     display: flex;
     align-items: center;
     line-height: 40px;
-  }
-  
-  ul li.item-menu:hover {
+}
+ 
+ul li.item-menu:hover {
     background: rgb(121, 43, 128);
-  }
-  
-  ul li.item-menu a .txt-link {
+}
+ 
+ul li.item-menu a .txt-link {
     margin-left: 20px;
-  }
-  
-  ul li.item-menu a .icon > i {
+}
+ 
+ul li.item-menu a .icon > i {
     font-size: 30px;
-  }
-  
+}
 .responsivo{
     display: none;
 }
  
 @media screen  and (min-width: 50px) and (max-width: 1013px) {
  
-    nav.menu-lateral {
-        display: flex;
-        height: 100%;
-        width: 100%;
-    }
+  
  
     nav.menu-lateral:hover {
         width: 200px;
     }
  
-    .amparos {
-        font-size: 40px;
-        margin-left: 0;
-    }
- 
-    #info-text {
-        font-size: 16px;
-        width: 300px;
-        right: 10px;
-    }
- 
-    #panic-button {
-        top: 100px;
-        right: 50px;
-        width: 60px;
-        height: 60px;
-    }
- 
-    #panic-button img {
-        width: 60%;
-        height: 80%;
-    }
+  
  
     ul li.item-menu a {
         font-size: 16px;
@@ -303,26 +276,27 @@ nav.menu-lateral {
    
     .amparos {
         font-size: 30px;
+        margin-top:0px;
         margin-left: 0;
     }
  
     #info-text {
-        font-size: 14px;
-        width: 220px;
+        font-size: 16px;
+        width: 360px;
         right: 5px;
     }
  
     #panic-instruction {
-        font-size: 14px;
-        width: 200px;
+        font-size: 16px;
+        width: 240px;
         top:420px;
-        right: 20px;
+        right: 60px;
         margin-top: 0vh;
     }
  
     #panic-button {
-        top: 490px;
-        right: 30px;
+        top: 520px;
+        right: 150px;
         width: 50px;
         height: 50px;
     }
@@ -359,5 +333,7 @@ nav.menu-lateral {
         flex-direction: column;
         height: 40vh;
     }
+
+    
  
 }

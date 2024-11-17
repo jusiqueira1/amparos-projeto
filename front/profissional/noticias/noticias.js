@@ -153,6 +153,7 @@
 window.addEventListener('load', async () => {
     const newsContainer = document.getElementById("cards");
     newsContainer.innerHTML = '';
+    
 
     try {
         const response = await fetch("http://localhost:3004/api/noticias", { method: 'GET' });
@@ -184,6 +185,7 @@ window.addEventListener('load', async () => {
 
     let perfil = localStorage.getItem('perfil');
     document.getElementById('cadastro_noticias').style.display = (perfil === 'admin') ? 'block' : 'none';
+    
 });
 
 async function cadastrar(event) {

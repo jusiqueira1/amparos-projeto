@@ -69,7 +69,6 @@ nav.menu-lateral {
     font-size: 30px;
   }
   
-
 body {
     background: linear-gradient(to bottom, rgb(209, 110, 255), rgb(250, 244, 255), rgb(126, 104, 255));
     background-image: url('/front/imagens/fundo_branco.png');
@@ -232,3 +231,75 @@ h2 {
     align-items: center;
     justify-content: center;
 }
+
+
+
+@media screen  and (min-width: 50px) and (max-width: 1013px) {
+ 
+
+
+    nav.menu-lateral:hover {
+        width: 200px;
+    }
+    
+    ul li.item-menu a {
+        font-size: 16px;
+        padding: 12px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    nav.menu-lateral {
+        width: 100%;
+        height: auto;
+        background-color: rgb(202, 145, 206);
+        padding: 15px;
+        box-shadow: 3px 0 0 #a24cb7;
+        position: fixed;
+        top: 90vh;
+        left: 0;
+        transition: width 0.3s ease;
+        overflow: hidden;
+        white-space: nowrap;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    nav.menu-lateral ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    nav.menu-lateral:hover {
+        width: 100%;
+    }
+    
+    ul li.item-menu a {
+        visibility: visible;
+        margin-left: 8px;
+        margin-right: 12px;        
+    }
+    
+    ul li.item-menu a .txt-link {
+        display: none;
+    }
+    
+/* Estilos do card */
+.card {
+    background-color: #efb0ff;
+    border: #dd53ff solid;
+    width: 400px;
+    height: 550px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: arial;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+}    
